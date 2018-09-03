@@ -23,4 +23,22 @@
 https://blog.csdn.net/twodogya/article/details/80187469
 
 
-收到
+## 首先将每个组员仓库的SSH添加到服务器仓库（如何创建每个人的分支）
+
+这个SSH不能添加到多个仓库，只能添加到一个仓库
+
+## 每天早上将仓库的pull到本地仓库，每天晚上将自己仓库的文件push到服务器仓库
+## 仓库地址 https://github.com/GrantWD/neteasy.git
+
+## 如果忘记git pull 到本地后，直接编写代码，忘记pull了，如果在更改后再用git pull 更新到本地代码
+结果就会报错
+如果需要保留刚才本地修改的代码，并且把git服务器上的代码pull到本地，本地的修改过的代码会被
+暂时的封存起来
+```javascript
+	git stash
+	git pull origin master
+	git stash pop
+	git add
+	git commit
+	git push
+```
