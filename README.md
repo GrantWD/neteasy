@@ -15,7 +15,12 @@
 ## 移动端布局
 	rem布局回合布局
 
-## 公共的样式reset文件
+## 公共的样式reset文件不能随意的改动
+
+## 页面的头部和底部是公共的组件 
+
+## 在vue中使用sass
+https://blog.csdn.net/twodogya/article/details/80187469
 
 
 收到
