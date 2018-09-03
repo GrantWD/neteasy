@@ -1,26 +1,35 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <Account></Account>
+=======
+    <Footer></Footer>
+>>>>>>> 6120f84c2ba49ff0befefd1755ce01a265297a44
   </div>
 </template>
-
 <script>
+<<<<<<< HEAD
   import Account from './page/Account'
 export default {
   name: 'App',
   components:{
     Account,
+=======
+import Footer from './components/Footer.vue';
+export default {
+  name: 'App',
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    Footer
+>>>>>>> 6120f84c2ba49ff0befefd1755ce01a265297a44
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss" scoped>
+
 </style>
