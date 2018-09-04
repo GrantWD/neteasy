@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-   <MusicList></MusicList>
+    <PlayerMusic></PlayerMusic>
+    <!-- <MusicList></MusicList> -->
   </div>
 </template>
 <script>
+import PlayerMusic from './page/PlayerMusic.vue';
 import MusicList from './page/MusicList.vue';
 export default {
   name: 'app',
@@ -12,6 +14,7 @@ export default {
     }
   },
   components: {
+    PlayerMusic,
     MusicList
   } 
 }

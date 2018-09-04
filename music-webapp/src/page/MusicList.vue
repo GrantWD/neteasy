@@ -18,6 +18,13 @@
 						</div>
 					</a>
 				</div>
+				
+			</div>
+			<div class="listType">
+				<div class="type"><span class="text">{{ musicListInfo.listType.type }}</span><span class="icon"></span></div>
+				<div class="typeItem">
+					<a  v-for="(item, index) in musicListInfo.listType.typeArray">{{ item }}</a>
+				</div>
 			</div>
 			 <ul class="musicList">
 				<div class="inner">
@@ -49,6 +56,10 @@ export default {
 			listTit:'失落少年孤独心俱乐部',
 			listSubTit:'欢迎加入失落少年孤独心俱乐部',
 			listImgUrl:'http://img11.360buyimg.com/jdcms/s170x170_jfs/t16006/110/995107245/352305/c07386d3/5a460b35N7d0aa2bf.jpg!q90!cc_170x170.webp',
+			listType:{
+				type:'轻音乐',
+				typeArray:['华语','影视原声','民谣']
+			},
 			musicMsgArray:[
 			{	
 				musicId:201809001,
@@ -107,7 +118,7 @@ export default {
 
  
 <style lang='scss' scoped>
-	
+		$backgroundUrl:'../../static/images/';
 	.playList{
 		display: flex;
 		justify-content: space-between;
@@ -147,21 +158,25 @@ export default {
 						flex:1;
 						.listName{
 							padding-top:.1rem;
-							font-size: .18rem;
+							font-size: .17rem;
 							color:#fff;
+						
+							display: flex;
+							align-items: center;
 							// font-weight: bold;
 							.icon.queen{
 								width: .24rem;
 								height: .24rem;
-								display: inline-block;
-								vertical-align: middle;
+								margin-right: .1rem;
+								background-image: url(#{$backgroundUrl}huangguan48×48.png);
+								background-size: 100%;
 							}
 							.icon.next{
 								width:.14rem;
 								height: .17rem;
-								display: inline-block;
-
-								vertical-align: middle;
+								margin-right: .1rem;
+								background-image: url(#{$backgroundUrl}next28×34.png);
+								background-size: 100%;
 							}
 						}
 						.info-l{
@@ -178,13 +193,48 @@ export default {
 					}
 				}
 			}
+			
 
 		}
+		.listType{
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			padding-left: .1rem;
+			margin-top: .19rem;
+			font-size: .14rem;
+			color:#323233;
+				.type{
+					padding: 0 .15rem;
+					border:1px solid #cdcece;
+					border-radius: 15px;
+					.text{
+						vertical-align: middle;
+					}
+					.icon{
+						display: inline-block;
+						margin-left: .1rem;
+						width:.1rem;
+						height: .15rem;
+						vertical-align: middle;
+						background-image: url(#{$backgroundUrl}next20×30.png);
+						background-size: 100%;
+					}
+				}
+				.typeItem{
+					a{
+						padding:0 .1rem;
+					}
+					a+a{
+						border-left: 1px solid #e2e3e4;
+					}
+				}
+			}
 	}
 	.musicList{
 		$imgSize:1.8rem;
 		$iconSize:.15rem;
-		$backgroundUrl:'../../static/images/';
+	
 		
 		padding: 0 .06rem;
 		.inner{
