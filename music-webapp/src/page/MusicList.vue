@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div class="playList">
         <PlayListHeader></PlayListHeader>
 		<div class="main">
@@ -42,15 +43,20 @@
 		<div class="listTypeName"></div>
 		<Footer></Footer>  
     </div>
+=======
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+
+  </div>
+>>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
 </template>
 
 <script>
-import Footer from '../components/Footer.vue';
-import PlayListHeader from '../components/PlayListHeader.vue';
 export default {
-  name: 'playList',
+  name: 'HelloWorld',
   data () {
     return {
+<<<<<<< HEAD
 		musicListInfo:{
 			listName:'精品歌单',
 			listTit:'失落少年孤独心俱乐部',
@@ -107,15 +113,15 @@ export default {
 		
 		}
 		
+=======
+      msg: 'vuew2x'
+>>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
     }
-  },
-  components: {
-    Footer,
-    PlayListHeader
   }
 }
 </script>
 
+<<<<<<< HEAD
  
 <style lang='scss' scoped>
 		$backgroundUrl:'../../static/images/';
@@ -262,36 +268,9 @@ export default {
 					.type,.num{
 						vertical-align: middle;
 					}
+=======
+>>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
 
-					.icon{
-						display:inline-block;
-						height: $iconSize;
-						width: $iconSize;
-						background-size: 100%;
-						vertical-align: middle
-					}
-				}
-				.listenNum{
-					right:.1rem;
-					top:0;
-					.icon{
-						background-image: url(#{$backgroundUrl}erji30×30.png)
-					}
-				}
-				.musicType{
-					left:.1rem;
-					bottom:.05rem;
-					.icon{
-						background-image: url(#{$backgroundUrl}persmall30×30.png)
+<style scoped>
 
-					}
-				}
-			}
-			.musicDesc{
-				padding: 0 .05rem;
-				font-size: .06rem;
-				line-height:1.5;
-			}
-		}
-	}
 </style>

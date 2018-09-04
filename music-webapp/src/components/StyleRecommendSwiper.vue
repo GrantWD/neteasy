@@ -33,7 +33,8 @@
           },
           speed:300,
           autoplay : {
-            delay:3000
+            delay:3000,
+            disableOnInteraction: false,
           },
         })
       }
