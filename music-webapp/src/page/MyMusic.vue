@@ -1,8 +1,18 @@
 <template>
-  <div class="hello">
+  <div class="MyMusic">
     <MyMusicHeader></MyMusicHeader>
-    <MyMusicConList></MyMusicConList>
-    <MyMusicSelect></MyMusicSelect>
+    <div class="box">
+      <div>
+        <MyMusicConList></MyMusicConList>
+        <MyMusicSelect></MyMusicSelect>
+        <MyMusicCreateList></MyMusicCreateList>
+        <MyMusicSelect></MyMusicSelect>
+        <MyMusicCreateList></MyMusicCreateList>
+        <MyMusicSelect></MyMusicSelect>
+        <MyMusicCreateList></MyMusicCreateList>
+      </div>
+    </div>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -10,22 +20,38 @@
   import MyMusicHeader from '../components/MyMusicHeader'
   import MyMusicConList from '../components/MyMusicConList'
   import MyMusicSelect from '../components/MyMusicSelect'
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'vuew2x'
+  import MyMusicCreateList from '../components/MyMusicCreateList'
+  import Footer from '../components/Footer'
+  export default {
+    name: 'HelloWorld',
+    components: {
+      MyMusicHeader,
+      MyMusicConList,
+      MyMusicSelect,
+      MyMusicCreateList,
+      Footer
     }
-  },
-  components: {
-    MyMusicHeader,
-    MyMusicConList,
-    MyMusicSelect
-  }
 }
 </script>
 
  
-<style scoped>
- 
+<style scoped lang="scss">
+  .MyMusic{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+  }
+
+
+  body{
+    height:100%;
+  }
+  .box{
+    display:flex;
+    height:100%;
+    flex-direction: column;
+    flex:1;
+    overflow-y: scroll;
+  }
 </style>

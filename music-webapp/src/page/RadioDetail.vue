@@ -1,22 +1,16 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    
+  <div class="RadioDetail">
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'vuew2x'
-    }
-  }
+  name: 'HelloWorld'
 }
 </script>
 
  
-<style scoped>
+<style scoped lang="scss">
  
 </style>

@@ -1,20 +1,19 @@
 <template>
+  <RadioDetail></RadioDetail>
 </template>
 
 <script>
-// import MusicList from './page/MusicList.vue';
+import RadioDetail from './page/RadioDetail';
 export default {
   name: 'app',
-  data () {
-    return {
-      msg:'aa'
-    }
+  components:{
+    RadioDetail
   }
 }
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
 
