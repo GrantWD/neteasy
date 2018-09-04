@@ -3,6 +3,7 @@
    <StyleRecommend></StyleRecommend>
   </div>
 </template>
+
 <script>
 import StyleRecommend from './page/StyleRecommend';
 export default {
@@ -17,9 +18,9 @@ export default {
 }
 </script>
 
-
-<style scoped>
-  #app{
+<style>
+  #app {
     height: 100%;
   }
 </style>
+

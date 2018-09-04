@@ -12,11 +12,11 @@
   import StyleRecommendStyle from '../components/StyleRecommendStyle'
   import StyleRecommendSection from '../components/StyleRecommendSection'
   import Footer from '../components/Footer'
-  export default {
+export default {
   name: 'HelloWorld',
   data () {
     return {
-
+      msg: 'vuew2x'
     }
   },
   components:{
