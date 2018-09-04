@@ -2,17 +2,14 @@
 </template>
 
 <script>
-import MusicList from './page/MusicList.vue';
+// import MusicList from './page/MusicList.vue';
 export default {
   name: 'app',
   data () {
     return {
-      msg:'aj'
+      msg:'aa'
     }
-  },
-  components: {
-    MusicList
-  } 
+  }
 }
 </script>
 
