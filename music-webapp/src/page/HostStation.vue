@@ -2,7 +2,7 @@
   <div class="hello">
     <StyleRecommendHeader></StyleRecommendHeader>
     <StyleRecommendStyle></StyleRecommendStyle>
-    <HelloWorldSection></HelloWorldSection>
+    <HostStationSection></HostStationSection>
     <Footer></Footer>
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
   import StyleRecommendHeader from '../components/StyleRecommendHeader'
   import StyleRecommendStyle from '../components/StyleRecommendStyle'
-  import HelloWorldSection from '../components/HelloWorldSection'
+  import HostStationSection from '../components/HostStationSection'
   import Footer from '../components/Footer'
 export default {
   name: 'HelloWorld',
@@ -22,7 +22,7 @@ export default {
   components:{
     StyleRecommendHeader,
     StyleRecommendStyle,
-    HelloWorldSection,
+    HostStationSection,
     Footer,
   }
 }
