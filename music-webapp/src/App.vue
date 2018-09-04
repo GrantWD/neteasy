@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld></HelloWorld>
+  <HostStation></HostStation>
 </template>
 
 <script>
-import HelloWorld from './page/HelloWorld';
+import HostStation from './page/HostStation';
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HostStation
   }
 }
 </script>

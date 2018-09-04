@@ -30,11 +30,12 @@
   display:flex;
   padding:0 0.1rem;
   border-bottom:0.005rem solid #e2e3e4;
+  background: #ffffff;
 }
   .RadioClassDetailImgLine{
     width:0.005rem;
     height:0.3rem;
-    margin:0 0.005rem;
+    margin:0 0.01rem;
     align-self: center;
   }
 </style>
