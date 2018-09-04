@@ -33,6 +33,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid #dddee0;
+    background: #ffffff;
   }
   .StyleRecommendDay a div{
     width: 0.5rem;

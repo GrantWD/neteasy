@@ -3,6 +3,7 @@
     <StyleRecommendHeader></StyleRecommendHeader>
     <StyleRecommendStyle></StyleRecommendStyle>
     <StyleRecommendSection></StyleRecommendSection>
+    <Footer></Footer>
   </div>
 </template>
 
@@ -10,7 +11,8 @@
   import StyleRecommendHeader from '../components/StyleRecommendHeader'
   import StyleRecommendStyle from '../components/StyleRecommendStyle'
   import StyleRecommendSection from '../components/StyleRecommendSection'
-export default {
+  import Footer from '../components/Footer'
+  export default {
   name: 'HelloWorld',
   data () {
     return {
@@ -21,6 +23,7 @@ export default {
     StyleRecommendHeader,
     StyleRecommendStyle,
     StyleRecommendSection,
+    Footer,
   }
 }
 </script>
@@ -31,5 +34,6 @@ export default {
     height: 100%;
     display: flex;
     flex-direction: column;
+    background: #f1f2f4;
   }
 </style>

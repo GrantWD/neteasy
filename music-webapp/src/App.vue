@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-   <MusicList></MusicList>
+   <StyleRecommend></StyleRecommend>
   </div>
 </template>
 <script>
-import MusicList from './page/MusicList.vue';
+import StyleRecommend from './page/StyleRecommend';
 export default {
   name: 'app',
   data () {
@@ -12,8 +12,8 @@ export default {
     }
   },
   components: {
-    MusicList
-  } 
+    StyleRecommend
+  }
 }
 </script>
 
