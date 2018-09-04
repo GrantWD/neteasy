@@ -1,12 +1,12 @@
 <template>
   <div class="StyleRecommendHeader">
     <div class="StyleRecommendHeaderOne">
-      <img class="StyleRecommendHeaderImg" src="" alt="">
+      <img class="StyleRecommendHeaderImg" src="../../static/images/StyleRecommendHeader1.png" alt="">
       <div class="StyleRecommendHeader1Div">
-        <img src="" alt="">
+        <img src="../../static/images/StyleRecommendHeader3.png" alt="">
         <input placeholder="有没有 最近很火哦" type="text">
       </div>
-      <img class="StyleRecommendHeaderImg" src="" alt="">
+      <img class="StyleRecommendHeaderImg" src="../../static/images/StyleRecommendHeader2.png" alt="">
     </div>
   </div>
   <!--img图片没有添加-->

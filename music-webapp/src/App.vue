@@ -1,19 +1,18 @@
 <template>
-  <RadioDetail></RadioDetail>
+  <HelloWorld></HelloWorld>
 </template>
 
 <script>
-import RadioDetail from './page/RadioDetail';
+import HelloWorld from './page/HelloWorld';
 export default {
   name: 'app',
-  components:{
-    RadioDetail
+  components: {
+    HelloWorld
   }
 }
 </script>
-
-
 <style scoped lang="scss">
-
+  #app {
+    height: 100%;
+  }
 </style>
-
