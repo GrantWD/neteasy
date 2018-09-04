@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-   <StyleRecommend></StyleRecommend>
+   <HostStation></HostStation>
   </div>
 </template>
 
 <script>
-import StyleRecommend from './page/StyleRecommend';
+import HostStation from './page/HostStation';
 export default {
   name: 'app',
   data () {
@@ -13,7 +13,7 @@ export default {
     }
   },
   components: {
-    StyleRecommend
+    HostStation
   }
 }
 </script>
