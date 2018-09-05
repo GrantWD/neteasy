@@ -254,9 +254,10 @@ export default {
 					.type,.num{
 						vertical-align: middle;
 					}
-=======
->>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
+        }
+       }
+      }
+    }
 
-<style scoped>
 
 </style>
