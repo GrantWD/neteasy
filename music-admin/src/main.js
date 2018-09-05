@@ -3,12 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 引入公共样式
+import '@/assets/css/reset.css'
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#aa',
   router,
   components: { App },
   template: '<App/>'

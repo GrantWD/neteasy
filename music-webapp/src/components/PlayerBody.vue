@@ -43,17 +43,15 @@ export default {
             margin-top: .78rem;
             width:$outerSize;
             height: $outerSize;
-            background-color: black;
-            border-radius: 50%;
+            background-image: url(#{$backgroundUrl}disc-ip6.png);
+            background-size: contain;
             .inner{
                 display:flex;
                 justify-content: center;
                 align-items: center;
                 width: $innerSize;
                 height: $innerSize;
-                background-image: url(#{$backgroundUrl}player576×576.png);
-                background-size: 100%;
-                border-radius: 50%;
+                
 
                 .sinerImg{
                     width: $imgSize;

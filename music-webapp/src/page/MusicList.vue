@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="playList">
         <PlayListHeader></PlayListHeader>
 		<div class="main">
@@ -43,20 +42,12 @@
 		<div class="listTypeName"></div>
 		<Footer></Footer>  
     </div>
-=======
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-
-  </div>
->>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
 </template>
-
 <script>
 export default {
   name: 'HelloWorld',
   data () {
     return {
-<<<<<<< HEAD
 		musicListInfo:{
 			listName:'精品歌单',
 			listTit:'失落少年孤独心俱乐部',
@@ -112,16 +103,12 @@ export default {
 		]
 		
 		}
-		
-=======
-      msg: 'vuew2x'
->>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
+	
     }
   }
 }
 </script>
 
-<<<<<<< HEAD
  
 <style lang='scss' scoped>
 		$backgroundUrl:'../../static/images/';
@@ -268,9 +255,11 @@ export default {
 					.type,.num{
 						vertical-align: middle;
 					}
-=======
->>>>>>> 21d2a0c04b33f893d0da50f73facc2a40073966d
+				}
+			}
+		}
+	}
 
-<style scoped>
+
 
 </style>
