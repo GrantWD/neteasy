@@ -1,4 +1,18 @@
 <template>
+<<<<<<< HEAD
+  <Account></Account>
+</template>
+
+<script type="text/ecmascript-6">
+  import Account from './page/Account.vue'
+  export default {
+    components: {
+      Account
+    }
+  }
+</script>
+
+=======
 	<MusicList></MusicList>
   <!-- <PlayerMusic></PlayerMusic> -->
 </template>
@@ -16,8 +30,7 @@ export default {
 </script>
 
 
+>>>>>>> a36cbbde54f1598a5196478702b9f34cd1218505
 <style scoped lang="scss">
-  #app {
-    height: 100%;
-  }
+
 </style>
