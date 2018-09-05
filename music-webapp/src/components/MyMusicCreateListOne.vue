@@ -1,11 +1,14 @@
 <template>
-    <div class="MyMusicCreateListOne">
-      <img class="MyMusicCreateListOneImg" :src="imgSrc8">
-      <div class="MyMusicCreateListOneBox">
-        <p>{{tit2}}</p>
-        <p>{{text2}}</p>
+  <div class="cn1">
+    <div class="left">
+      <a href="#"><img src="img/t.jpg" alt=""></a>
+      <div class="left-p">
+        <p class="p1">长大了责任很重</p>
+        <span class="p2"><i>Lv.1</i></span>
       </div>
     </div>
+    <a class="right" href="#"><img src="img/2.jpg" alt=""><span>签到</span></a>
+  </div>
 </template>
 
 <script>

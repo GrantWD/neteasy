@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 // 引入了公共的样式
 import '@/assets/css/reset.css'
+import './assets/css/AccountS.css'
 
 Vue.config.productionTip = false
 
@@ -12,7 +13,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { 
+  components: {
     App
   },
   template: '<App></App>'
