@@ -1,6 +1,7 @@
 
 <template>
     <div class="playList">
+		<PlayListHeader></PlayListHeader>
 		<div class="main">
 			<div class="listBanner">
 				<div class="img">
@@ -39,12 +40,12 @@
 				</div>
         	</ul> 
 		</div>
-		<div class="listTypeName"></div>
 		<Footer></Footer>  
     </div>
 </template>
-
 <script>
+import Footer from '../components/Footer';
+import PlayListHeader from '../components/PlayListHeader';
 export default {
   name: 'HelloWorld',
   data () {
@@ -105,6 +106,10 @@ export default {
 
       }
     }
+  },
+  components: {
+	  Footer,
+	  PlayListHeader
   }
 }
 </script>
