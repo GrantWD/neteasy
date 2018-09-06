@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import StyleRecommend from '../page/StyleRecommend'
+import HostStation from '../page/HostStation'
+import MyMusic from '../page/MyMusic'
+
 
 Vue.use(Router)
 
@@ -8,8 +11,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      name: 'StyleRecommend',
+      component: StyleRecommend
+    },
+    {
+      path: '/HostStation',
+      name: 'HostStation',
+      component: HostStation
+    },
+    {
+      path: '/MyMusic',
+      name: 'MyMusic',
+      component: MyMusic
+    },
   ]
 })

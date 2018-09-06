@@ -1,12 +1,12 @@
 <template>
   <div class="StyleRecommendVideo">
     <div class="StyleRecommendVideoOne">
-      <div class="StyleRecommendVideoOne1Div"><img src="../../static/images/StyleRecommendVideo1.png" alt=""></div>
+      <div class="StyleRecommendVideoOne1Div"><img :src="Img" alt=""></div>
       <div class="StyleRecommendVideoOne2Div">
-        <div class="StyleRecommendVideoOne2DivOne"><img src="../../static/images/StyleRecommendVideo2.png" alt=""><span>之一w</span></div>
+        <div class="StyleRecommendVideoOne2DivOne"><img :src="IdImg" alt=""><span>{{IdName}}</span></div>
         <div class="StyleRecommendVideoOne2DivTwo">
-          <span><img src="../../static/images/StyleRecommendVideo3.png" alt="">21万</span>
-          <span><img src="../../static/images/StyleRecommendVideo4.png" alt="">248</span>
+          <span><img src="../../static/images/StyleRecommendVideo3.png" alt="">{{PlayNum}}</span>
+          <span><img src="../../static/images/StyleRecommendVideo4.png" alt="">{{CommentOrd}}</span>
           <span><img src="../../static/images/StyleRecommendVideo5.png" alt=""></span>
         </div>
       </div>
@@ -16,7 +16,16 @@
 
 <script>
     export default {
-        name: "StyleRecommendVideo"
+        name: "StyleRecommendVideo",
+      data(){
+          return{
+                Img:'../../static/images/StyleRecommendVideo1.png',
+                IdImg:'../../static/images/StyleRecommendVideo2.png',
+                IdName:'之一w',
+                PlayNum:'21万',
+                CommentOrd:'248'
+              }
+          }
     }
 </script>
 

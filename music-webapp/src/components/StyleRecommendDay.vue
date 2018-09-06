@@ -1,27 +1,43 @@
 <template>
     <div class="StyleRecommendDay">
-      <a href="#">
-        <div><img src="../../static/images/StyleRecommendDay1.gif" alt=""></div>
-        <span>私人FM</span>
-      </a>
-      <a href="#">
-        <div><img src="../../static/images/StyleRecommendDay2.gif" alt=""></div>
-        <span>每日推荐</span>
-      </a>
-      <a href="#">
-        <div><img src="../../static/images/StyleRecommendDay3.gif" alt=""></div>
-        <span>歌单</span>
-      </a>
-      <a href="#">
-        <div><img src="../../static/images/StyleRecommendDay4.gif" alt=""></div>
-        <span>排行榜</span>
+      <a href="#" v-for="StyleRecommendDay in StyleRecommendDay">
+        <router-link :to="StyleRecommendDay.to">
+          <div class="StyleRecommendDay1Div"><img :src="StyleRecommendDay.img" alt=""></div>
+          <span class="StyleRecommendDay1Span">{{StyleRecommendDay.name}}</span>
+        </router-link>
       </a>
     </div>
 </template>
 
 <script>
     export default {
-        name: "StyleRecommendDay"
+        name: "StyleRecommendDay",
+      data(){
+          return{
+            StyleRecommendDay:[
+              {
+                to:'',
+                img:'../../static/images/StyleRecommendDay1.gif',
+                name:'私人FM',
+              },
+              {
+                to:'',
+                img:'../../static/images/StyleRecommendDay2.gif',
+                name:'每日推荐',
+              },
+              {
+                to:'',
+                img:'../../static/images/StyleRecommendDay3.gif',
+                name:'歌单',
+              },
+              {
+                to:'',
+                img:'../../static/images/StyleRecommendDay4.gif',
+                name:'排行榜',
+              },
+            ]
+          }
+      },
     }
 </script>
 
@@ -36,7 +52,7 @@
     border-bottom: 1px solid #dddee0;
     background: #ffffff;
   }
-  .StyleRecommendDay a div{
+  .StyleRecommendDay1Div{
     width: 0.5rem;
     height: 0.5rem;
     background: #fd4b3f;
@@ -45,11 +61,11 @@
     justify-content: center;
     align-items: center;
   }
-  .StyleRecommendDay a div img{
+  .StyleRecommendDay1Div img{
     width: 0.27rem;
     height: 0.27rem;
   }
-  .StyleRecommendDay a span{
+  .StyleRecommendDay1Span{
     font-size: 0.12rem;
     color: #262729;
     margin-top: 0.07rem;

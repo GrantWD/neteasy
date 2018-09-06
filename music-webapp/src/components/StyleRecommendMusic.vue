@@ -1,33 +1,13 @@
 <template>
   <div class="StyleRecommendMusic">
     <a class="StyleRecommendMusic1A" href="#">
-      推荐歌单
+      {{sssA.title}}
       <img src="../../static/images/StyleRecommendMusic1.png" alt="">
     </a>
     <ul class="StyleRecommendMusic1Ul">
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
-      </li>
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
-      </li>
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
-      </li>
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
-      </li>
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
-      </li>
-      <li>
-        <img src="../../static/images/StyleRecommendMusic2.jpg" alt="">
-        <span>失落少年孤独心俱乐部</span>
+      <li v-for="sss in sssA.arr">
+        <img :src="sss.url" alt="">
+        <span>{{sss.name}}</span>
       </li>
     </ul>
   </div>
@@ -35,7 +15,15 @@
 
 <script>
     export default {
-        name: "StyleRecommendMusic"
+        name: "StyleRecommendMusic",
+      data(){
+          return{
+
+          }
+      },
+      props:{
+          sssA:Object
+      }
     }
 </script>
 
