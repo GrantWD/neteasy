@@ -2,14 +2,7 @@
   <div class="StyleRecommendSwiper">
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="http://p1.music.126.net/MDae7AehVdzydohlhZoP1Q==/109951163532900237.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/x_GzdJGXtR8dAeokfdeJpw==/109951163531399705.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/XqafGbZRHeXlskleoKV1xA==/109951163532896927.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/_kncwTPVMQrZ-F9z6XYHrw==/109951163532901204.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/Bmim16r0aF94-FiUC-lamg==/109951163532899349.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/fUjZDaxxY5l88Fu1fwtzqQ==/109951163532909085.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/_s2smCZqnkUet2dAqO2uyQ==/109951163532910040.jpg" alt=""></div>
-        <div class="swiper-slide"><img src="http://p1.music.126.net/sPtxm3THc8-R6AwVZl09_w==/109951163532905779.jpg" alt=""></div>
+        <div class="swiper-slide" v-for="img in img"><img :src="img.Img" alt=""></div>
       </div>
       <!-- 如果需要分页器 -->
       <div class="swiper-pagination"></div>
