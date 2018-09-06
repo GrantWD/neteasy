@@ -1,6 +1,9 @@
 <template>
     <div class="playerHeader">
-        <div class="head-l"></div>
+         <router-link to="/">  
+            <div class="head-l"></div>     
+        </router-link>
+      
         <div class="head-m">
             <p class="musicName">{{ musicName }}</p>
             <p class="singer">{{ singer }}<span class="icon"></span></p>

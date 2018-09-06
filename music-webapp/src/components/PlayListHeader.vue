@@ -1,8 +1,10 @@
 <template>
     <header>
-        <div class="head-l"></div>
+         <div class="head-l"></div>      
         <div class="head-m">歌单</div>
-        <div class="head-r"></div>
+        <router-link to="/PlayerMusic">
+            <div class="head-r"></div>        
+        </router-link>
     </header>
 </template>
 
