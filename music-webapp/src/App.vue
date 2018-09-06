@@ -1,15 +1,13 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <friend></friend>
 </template>
 
 <script>
-  import RadioDetail from './page/RadioDetail'
+  import Friend from './page/Friend'
   export default {
     name: 'App',
     components:{
-      RadioDetail
+      Friend,
     }
   }
 </script>
@@ -19,3 +17,4 @@
     height: 100%;
   }
 </style>
+
