@@ -21,7 +21,7 @@
                 name:'私人FM',
               },
               {
-                to:'',
+                to:'/DailySpecial',
                 img:'../../static/images/StyleRecommendDay2.gif',
                 name:'每日推荐',
               },
