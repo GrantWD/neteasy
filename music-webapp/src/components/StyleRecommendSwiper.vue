@@ -37,6 +37,36 @@
             disableOnInteraction: false,
           },
         })
+      },
+      data(){
+          return{
+            img:[
+              {
+                Img: 'http://p1.music.126.net/MDae7AehVdzydohlhZoP1Q==/109951163532900237.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/x_GzdJGXtR8dAeokfdeJpw==/109951163531399705.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/XqafGbZRHeXlskleoKV1xA==/109951163532896927.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/_kncwTPVMQrZ-F9z6XYHrw==/109951163532901204.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/Bmim16r0aF94-FiUC-lamg==/109951163532899349.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/fUjZDaxxY5l88Fu1fwtzqQ==/109951163532909085.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/_s2smCZqnkUet2dAqO2uyQ==/109951163532910040.jpg'
+              },
+              {
+                Img: 'http://p1.music.126.net/sPtxm3THc8-R6AwVZl09_w==/109951163532905779.jpg'
+              },
+            ]
+          }
       }
     }
 </script>

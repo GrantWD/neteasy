@@ -13,7 +13,7 @@
   import StyleRecommendSection from '../components/StyleRecommendSection'
   import Footer from '../components/Footer'
 export default {
-  name: 'HelloWorld',
+  name: 'StyleRecommend',
   data () {
     return {
       msg: 'vuew2x'

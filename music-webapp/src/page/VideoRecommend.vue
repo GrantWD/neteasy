@@ -1,22 +1,30 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    
+  <div class="vm">
+    <video-recommend-header></video-recommend-header>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'vuew2x'
+  import VideoRecommendHeader from "../components/VideoRecommendHeader.vue"
+  import Footer from "../components/Footer.vue"
+  export default {
+    name:"VideoReconmmend",
+    components:{
+      VideoRecommendHeader,
+      Footer
     }
+
   }
-}
 </script>
 
- 
-<style scoped>
- 
+
+<style scoped lang="scss">
+  .vm{
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+  }
 </style>

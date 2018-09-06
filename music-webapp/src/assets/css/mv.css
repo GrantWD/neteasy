@@ -1,0 +1,141 @@
+/* CSS Document */
+header {
+  background: #dd4238;
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  header .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0.42rem; }
+    header .top a {
+      width: 7%;
+      margin: 0 0.05rem 0 0.12rem;
+      display: block;
+      height: 0.21rem; }
+      header .top a svg {
+        font-size: 0.21rem; }
+    header .top form {
+      display: flex;
+      height: 0.3rem;
+      line-height: 0.3rem;
+      width: 71%;
+      background-color: #df635b;
+      border-radius: 0.3rem; }
+      header .top form input {
+        display: block;
+        height: 0.3rem; }
+      header .top form .seach {
+        width: 40%;
+        border: 0;
+        outline: none;
+        border-radius: 0.15rem 0 0 0.15rem;
+        background: url("../img/su.jpg") no-repeat top right; }
+      header .top form .texts {
+        width: 60%;
+        border-radius: 0  0.15rem 0.15rem 0;
+        border: 0;
+        outline: none;
+        background: none;
+        color: #efb2ad;
+        text-indent: 5px;
+        font-size: 0.13rem; }
+  header .nav {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    align-items: center; }
+    header .nav li {
+      height: 0.42rem;
+      display: flex;
+      align-items: center; }
+      header .nav li a {
+        width: 100%;
+        display: block;
+        white-space: nowrap;
+        height: 0.25rem;
+        font-size: 0.14rem;
+        color: #fffffe;
+        line-height: 0.25rem;
+        margin: 0 0.15rem; }
+      header .nav li .active {
+        border-bottom: 3px solid #cccccb;
+        color: #cccccb; }
+
+.content {
+  width: 100%;
+  background: #f1f2f3; }
+  .content .c1 {
+    padding-top: 1px;
+    background: #ffffff;
+    margin-bottom: 5px;
+    width: 100%; }
+    .content .c1 .mvbox {
+      position: relative;
+      width: 100%; }
+      .content .c1 .mvbox img {
+        margin: 0.06rem auto;
+        width: 95%; }
+      .content .c1 .mvbox a {
+        display: block;
+        position: absolute; }
+        .content .c1 .mvbox a svg {
+          font-size: 0.1rem;
+          margin-right: 5px; }
+        .content .c1 .mvbox a span {
+          font-size: 0.1rem;
+          color: #ffffff; }
+      .content .c1 .mvbox .a1 {
+        right: 0.1rem;
+        top: 0.06rem;
+        padding: 0 0.1rem;
+        height: 0.21rem;
+        border-radius: 0.1rem;
+        border: 1px solid #808282; }
+      .content .c1 .mvbox .a2 {
+        left: 0.1rem;
+        bottom: 0.06rem; }
+      .content .c1 .mvbox .a3 {
+        right: 0.1rem;
+        bottom: 0.06rem; }
+    .content .c1 .p1 {
+      margin: 0 0.1rem;
+      color: #323233;
+      font-size: 0.15rem;
+      height: 0.44rem;
+      font-weight: bold;
+      line-height: 0.44rem;
+      border-bottom: 1px solid #e2e3e4; }
+    .content .c1 .p2 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 0.5rem; }
+      .content .c1 .p2 .ar {
+        display: flex;
+        margin-left: 0.1rem;
+        line-height: 0.3rem;
+        font-size: 0.12rem;
+        color: #323233; }
+        .content .c1 .p2 .ar img {
+          margin-right: 3px; }
+      .content .c1 .p2 .right {
+        display: flex; }
+        .content .c1 .p2 .right a {
+          display: block;
+          height: 0.17rem;
+          align-items: center;
+          margin-left: 0.35rem; }
+          .content .c1 .p2 .right a .avg {
+            margin-right: 3px;
+            font-size: 0.17rem; }
+          .content .c1 .p2 .right a span {
+            font-size: 0.1rem;
+            height: 0.17rem;
+            line-height: 0.17rem; }
+          .content .c1 .p2 .right a:last-child {
+            margin-right: 0.1rem; }
+
+/*# sourceMappingURL=mv.css.map */

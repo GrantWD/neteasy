@@ -17,7 +17,7 @@
 
 ## 公共的样式reset文件不能随意的改动
 
-## 页面的头部和底部是公共的组件 
+## 页面的头部和底部是公共的组件
 
 ## 在vue中使用sass
 https://blog.csdn.net/twodogya/article/details/80187469
@@ -57,3 +57,4 @@ PlayerMusic音乐播放(zy));
 MusicList歌单(zy)
 
 11
+
