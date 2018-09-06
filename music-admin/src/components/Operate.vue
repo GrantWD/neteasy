@@ -20,6 +20,7 @@ export default {
     .contentOperate{
         $mainColor:#ea2000;
         font-size: 0;
+        padding-bottom: 10px;
         a{
             display: inline-block;
             padding: 5px 8px;

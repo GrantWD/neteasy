@@ -1,7 +1,7 @@
 <template>
     <div class="MyMusicHeader">
       <img :src="imgSrc1" alt=""/>
-      <p>我的音乐</p>
+      <p>{{ord}}</p>
       <img :src="imgSrc2" alt=""/>
     </div>
 </template>
@@ -11,7 +11,7 @@
       name: "MyMusicHeader",
       data() {
         return {
-          ord: "",
+          ord: "我的音乐",
           imgSrc1: '../../static/images/aj_cloud.png',
           imgSrc2: '../../static/images/aj_rank.png'
         }

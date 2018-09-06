@@ -3,11 +3,11 @@
       <StyleRecommendSwiper></StyleRecommendSwiper>
       <HostStationDay></HostStationDay>
       <HostStationOptimization></HostStationOptimization>
-      <HostStationMusic v-for="HostStationMusic in HostStationMusic" :HostStationMusic="HostStationMusic"></HostStationMusic>
+      <HostStationMusic v-for="(HostStationMusic,index) in HostStationMusic" :key="HostStationMusic.index" :HostStationMusic="HostStationMusic"></HostStationMusic>
       <RadioClassHotClassify></RadioClassHotClassify>
-      <RadioClassDetail v-for="RadioClassDetail in RadioClassDetail"></RadioClassDetail>
+      <RadioClassDetail v-for="(RadioClassDetail,index) in RadioClassDetail" :key="RadioClassDetail.index"></RadioClassDetail>
       <RadioClassHotClassify></RadioClassHotClassify>
-      <RadioClassDetail v-for="RadioClassDetai2 in RadioClassDetai2"></RadioClassDetail>
+      <RadioClassDetail v-for="(RadioClassDetai2,index) in RadioClassDetai2" :key="RadioClassDetai2.index"></RadioClassDetail>
     </div>
 </template>
 

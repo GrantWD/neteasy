@@ -2,9 +2,9 @@
   <div class="StyleRecommendSection">
     <StyleRecommendSwiper></StyleRecommendSwiper>
     <StyleRecommendDay></StyleRecommendDay>
-    <StyleRecommendMusic v-for="(sssA,index,key) in StyleRecommendMusic" :sssA="sssA"></StyleRecommendMusic>
+    <StyleRecommendMusic v-for="(sssA,index) in StyleRecommendMusic" :key="sssA.index" :sssA="sssA"></StyleRecommendMusic>
     <StyleRecommendVideo></StyleRecommendVideo>
-    <StyleRecommendVideoMusic v-for="(sssB,index,key) in StyleRecommendVideoMusic1" :sssB="sssB"></StyleRecommendVideoMusic>
+    <StyleRecommendVideoMusic v-for="(sssB,index) in StyleRecommendVideoMusic" :key="sssB.index" :sssB="sssB"></StyleRecommendVideoMusic>
   </div>
 </template>
 
@@ -62,42 +62,42 @@
               ],
             },
             {
-              title:'推荐歌单',
+              title:'最新音乐',
               arr:[
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/NWhzcrT1PSAGq4yc-WqyxA==/19218363742489476.jpg?param=140y140',
+                  name:'纯音乐:100%愉快「心情必备」持续更新',
+                  PlayNum: '10万'
                 },
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/YTjh2eggiNdCCSfr0Sa2ig==/109951163531436091.jpg?param=140y140',
+                  name:'复古迷幻|无限慵懒的夏末秋初',
+                  PlayNum: '57471'
                 },
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/LduH3dTGvkaZqxeYASYiuQ==/109951163469234264.jpg?param=140y140',
+                  name:'粤语对唱｜耿耿于怀只因曾经一往情深',
+                  PlayNum: '74590'
                 },
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/8ZzuNypxeiHyr6I3DoudYQ==/109951163519258184.jpg?param=140y140',
+                  name:'「伪治愈系Rap」你价值连城伤口的良药',
+                  PlayNum: '36736'
                 },
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/rb_igkE2Kr9Io4zXczfNbw==/109951163522272010.jpg?param=140y140',
+                  name:'「氧气电子」扑面而来的H₂O',
+                  PlayNum: '30562'
                 },
                 {
-                  url:'http://p1.music.126.net/YB0w6R5f3gZNkxo4cJ5KSA==/19104014533272472.jpg?param=140y140',
-                  name:'仰望天空，只想这样静静地思考',
-                  PlayNum: '122万'
+                  url:'http://p1.music.126.net/PmZl8QBnoZF_GWxrZ6Lkog==/109951163467442961.jpg?param=140y140',
+                  name:'那些散发着文艺气息的法国电影',
+                  PlayNum: '150万'
                 },
               ],
             },
           ],
-          StyleRecommendVideoMusic1:[
+          StyleRecommendVideoMusic:[
             {
               Img:'../../static/images/StyleRecommendVideoMusic1.png',
               MusicName:'丑八怪',

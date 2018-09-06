@@ -1,27 +1,20 @@
 <template>
   <div class="MyMusicConListOne">
-    <img class="MyMusicConListAjMusic" :src="imgSrc3" alt="">
+    <img class="MyMusicConListAjMusic" :src="obj.imgSrc3" alt=""/>
     <div class="MyMusicConListBox">
-      <p>{{text1}}</p>
-      <span>{{tit1}}</span>
-      <img :src="imgSrc4" alt="">
+      <p>{{ obj.text1 }}</p>
+      <span>{{ obj.tit1 }}</span>
+      <img :src="obj.imgSrc4" alt=""/>
     </div>
   </div>
-
 </template>
 
 <script>
     export default {
         name: "MyMusicConListOne",
-        data(){
-          return {
-            text1:"本地音乐",
-            tit1:"2",
-            imgSrc3:"../../static/images/ajMusic.png",
-            imgSrc4:'../../static/images/ajRightError.png'
-          }
+        props: {
+          obj:Object
         }
-
     }
 </script>
 
@@ -51,6 +44,7 @@
     color:#323233;
     align-self: center;
     margin-right:2.07rem;
+    white-space:nowrap;
   }
   .MyMusicConListBox span{
     font-size:0.1rem;

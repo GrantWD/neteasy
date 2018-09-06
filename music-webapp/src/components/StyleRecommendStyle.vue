@@ -3,7 +3,7 @@
     <div class="StyleRecommendStyleOne">
       <div class="StyleRecommendStyleOneHeader">
         <router-link to="/"><a href="#">个性推荐</a></router-link>
-        <router-link to="/HostStation"><a href="#">主播电台</a></router-link>
+        <router-link to="/"><a href="#">主播电台</a></router-link>
       </div>
     </div>
   </div>

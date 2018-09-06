@@ -63,7 +63,7 @@ export default {
         {	
           musicId:201809001,
           musicPicUrl:'http://p1.music.126.net/CvQvHLu8ni8J1e_ytMhLPQ==/109951163532159779.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'15万',
+          listenNum:'50万',
           musicType:'萝莉音',
           musicDesc:"橙光游戏《君心我心》日常更新BGM"
         },
