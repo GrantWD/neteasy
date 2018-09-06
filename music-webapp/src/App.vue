@@ -1,15 +1,13 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <video-recommend></video-recommend>
 </template>
 
 <script>
-  import StyleRecommend from './page/StyleRecommend'
+  import VideoRecommend from './page/VideoRecommend'
   export default {
     name: 'App',
     components:{
-      StyleRecommend,
+      VideoRecommend,
     }
   }
 </script>
