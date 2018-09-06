@@ -2,8 +2,8 @@
   <div class="StyleRecommendStyle">
     <div class="StyleRecommendStyleOne">
       <div class="StyleRecommendStyleOneHeader">
-        <a href="#">个性推荐</a>
-        <a href="#">主播电台</a>
+        <router-link to="/"><a href="#">个性推荐</a></router-link>
+        <router-link to="/"><a href="#">主播电台</a></router-link>
       </div>
     </div>
   </div>

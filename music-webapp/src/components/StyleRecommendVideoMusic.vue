@@ -1,14 +1,14 @@
 <template>
   <div class="StyleRecommendVideoMusic">
     <div class="StyleRecommendVideoMusicOne">
-      <img class="StyleRecommendVideoMusicOne1Img" src="../../static/images/StyleRecommendVideoMusic1.png" alt="">
+      <img class="StyleRecommendVideoMusicOne1Img" :src="sssB.Img" alt="">
       <div class="StyleRecommendVideoMusicOne1Div">
         <div class="StyleRecommendVideoMusicOne1DivOne">
-          <p class="StyleRecommendVideoMusicOne1DivOne1P"><span>单曲</span>丑八怪</p>
-          <p class="StyleRecommendVideoMusicOne1DivOne2P"><img src="../../static/images/StyleRecommendVideo4.png" alt="">69166</p>
+          <p class="StyleRecommendVideoMusicOne1DivOne1P"><span>单曲</span>{{sssB.MusicName}}</p>
+          <p class="StyleRecommendVideoMusicOne1DivOne2P"><img src="../../static/images/StyleRecommendVideo4.png" alt="">{{sssB.CommentNum}}</p>
         </div>
         <div class="StyleRecommendVideoMusicOne1DivTwo">
-          <p class="StyleRecommendVideoMusicOne1DivTwo1P"><img src="../../static/images/StyleRecommendVideoMusic2.png" alt="">薛之谦</p>
+          <p class="StyleRecommendVideoMusicOne1DivTwo1P"><img :src="sssB.IdImg" alt="">{{sssB.IdName}}</p>
           <p class="StyleRecommendVideoMusicOne1DivTwo2P"><img src="../../static/images/StyleRecommendVideo5.png" alt=""></p>
         </div>
       </div>
@@ -18,7 +18,10 @@
 
 <script>
     export default {
-        name: "StyleRecommendVideoMusic"
+        name: "StyleRecommendVideoMusic",
+        props:{
+          sssB:Object
+        }
     }
 </script>
 

@@ -13,7 +13,7 @@
   import HostStationSection from '../components/HostStationSection'
   import Footer from '../components/Footer'
 export default {
-  name: 'HelloWorld',
+  name: 'HostStation',
   data () {
     return {
 

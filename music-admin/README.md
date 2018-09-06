@@ -1,21 +1,10 @@
-# music-admin
+#后台页面
+##增删改查
+- 问题1.vue中事件的绑定
+- 问题2.从子元素，向父元素传递参数 
 
-> A Vue.js project
+### vue中事件的绑定
+v-on:事件名称 = 'fn'
+事件的方法可以传递event参数在methods中定义，
+还可以传递参数，传递多个参数时候，事件方法用$event传递进去
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

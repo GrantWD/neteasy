@@ -2,7 +2,7 @@
   <div class="hello">
     <StyleRecommendHeader></StyleRecommendHeader>
     <StyleRecommendStyle></StyleRecommendStyle>
-    <StyleRecommendSection></StyleRecommendSection>
+    <StyleRecommendSectionSwiper></StyleRecommendSectionSwiper>
     <Footer></Footer>
   </div>
 </template>
@@ -10,10 +10,10 @@
 <script>
   import StyleRecommendHeader from '../components/StyleRecommendHeader'
   import StyleRecommendStyle from '../components/StyleRecommendStyle'
-  import StyleRecommendSection from '../components/StyleRecommendSection'
+  import StyleRecommendSectionSwiper from '../components/StyleRecommendSectionSwiper'
   import Footer from '../components/Footer'
 export default {
-  name: 'HelloWorld',
+  name: 'StyleRecommend',
   data () {
     return {
       msg: 'vuew2x'
@@ -22,7 +22,7 @@ export default {
   components:{
     StyleRecommendHeader,
     StyleRecommendStyle,
-    StyleRecommendSection,
+    StyleRecommendSectionSwiper,
     Footer,
   }
 }
