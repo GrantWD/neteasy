@@ -1,17 +1,20 @@
 <template>
   <div class="vm">
     <video-recommend-header></video-recommend-header>
+    <video-recommend-cont></video-recommend-cont>
     <Footer></Footer>
   </div>
 </template>
 
 <script>
   import VideoRecommendHeader from "../components/VideoRecommendHeader.vue"
+  import VideoRecommendCont from "../components/VideoRecommendCont.vue"
   import Footer from "../components/Footer.vue"
   export default {
-    name:"VideoReconmmend",
+    name:"VideoRecommend",
     components:{
       VideoRecommendHeader,
+      VideoRecommendCont,
       Footer
     }
 

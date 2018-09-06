@@ -7,7 +7,7 @@
     <ul class="StyleRecommendMusic1Ul">
       <li v-for="sss in sssA.arr">
         <img :src="sss.url" alt="">
-        <span>{{sss.name}}</span>
+        <span class="StyleRecommendMusic1Ul1Span">{{sss.name}}</span>
         <div>
           <img src="../../static/images/erji30×30.png" alt="">
           <span>{{sss.PlayNum}}</span>
@@ -70,6 +70,13 @@
     height: 1.19rem;
     border-radius: 0.02rem;
     margin-right: 0.02rem;
+  }
+  .StyleRecommendMusic1Ul1Span{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
   .StyleRecommendMusic1Ul li div{
     position: absolute;

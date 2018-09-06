@@ -3,11 +3,8 @@
       <StyleRecommendSwiper></StyleRecommendSwiper>
       <HostStationDay></HostStationDay>
       <HostStationOptimization></HostStationOptimization>
-      <HostStationMusic v-for="HostStationMusic in HostStationMusic" :HostStationMusic="HostStationMusic"></HostStationMusic>
-      <RadioClassHotClassify></RadioClassHotClassify>
-      <RadioClassDetail v-for="RadioClassDetail in RadioClassDetail"></RadioClassDetail>
-      <RadioClassHotClassify></RadioClassHotClassify>
-      <RadioClassDetail v-for="RadioClassDetai2 in RadioClassDetai2"></RadioClassDetail>
+      <HostStationMusic v-for="(HostStationMusic,index) in HostStationMusic" :key="HostStationMusic.index" :HostStationMusic="HostStationMusic"></HostStationMusic>
+      <RadioClassHotClassify v-for="classifyarr in arr" :key="classifyarr.index" :classifyarr="classifyarr"></RadioClassHotClassify>
     </div>
 </template>
 
@@ -17,7 +14,6 @@
   import HostStationOptimization from './HostStationOptimization'
   import HostStationMusic from './HostStationMusic'
   import RadioClassHotClassify from './RadioClassHotClassify'
-  import RadioClassDetail from './RadioClassDetail'
     export default {
         name: "HostStationSection",
       components:{
@@ -26,7 +22,6 @@
         HostStationOptimization,
         HostStationMusic,
         RadioClassHotClassify,
-        RadioClassDetail,
       },
       data(){
           return{
@@ -128,6 +123,116 @@
                 name:'排行榜',
               },
             ],
+            arr:[
+              {
+                tit3:'热门分类',
+                imgSrc11:'../../static/images/ajClImg.png',
+                arrdel:[
+                  {
+                    imgSrc9:'../../static/images/ajClBook.png',
+                    tit4:'有声书',
+                    imgSrc10:'../../static/images/ajClBulb.png',
+                    tit5:'知识技能'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClLine.png',
+                    tit4:'商业财经',
+                    imgSrc10:'../../static/images/ajClLeaf.png',
+                    tit5:'人文历史'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'外语世界',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'亲子宝贝'
+                  }
+                ]
+              },
+              {
+                tit3:'更多分类',
+                imgSrc11:'../../static/images/ajClImg.png',
+                arrdel:[
+                  {
+                    imgSrc9:'../../static/images/ajClBook.png',
+                    tit4:'创作|翻唱',
+                    imgSrc10:'../../static/images/ajClBulb.png',
+                    tit5:'音乐故事'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClLine.png',
+                    tit4:'3D电子',
+                    imgSrc10:'../../static/images/ajClLeaf.png',
+                    tit5:'相声曲艺'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'情感调频',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'美文读物'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'脱口秀',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'广播剧'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'二次元',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'明星做主播'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'娱乐影视',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'科技科学'
+                  }
+                ]
+              },
+              {
+                tit3:'更多分类',
+                imgSrc11:'../../static/images/ajClImg.png',
+                arrdel:[
+                  {
+                    imgSrc9:'../../static/images/ajClBook.png',
+                    tit4:'创作|翻唱',
+                    imgSrc10:'../../static/images/ajClBulb.png',
+                    tit5:'音乐故事'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClLine.png',
+                    tit4:'3D电子',
+                    imgSrc10:'../../static/images/ajClLeaf.png',
+                    tit5:'相声曲艺'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'情感调频',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'美文读物'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'脱口秀',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'广播剧'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'二次元',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'明星做主播'
+                  },
+                  {
+                    imgSrc9:'../../static/images/ajClAbc.png',
+                    tit4:'娱乐影视',
+                    imgSrc10:'../../static/images/ajClBaby.png',
+                    tit5:'科技科学'
+                  }
+                ]
+              },
+            ],
           }
       }
     }
@@ -138,5 +243,6 @@
     flex: 1;
     overflow-x: hidden;
     overflow-y: scroll;
+    background: #ffffff;
   }
 </style>
