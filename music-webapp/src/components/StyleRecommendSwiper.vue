@@ -22,7 +22,7 @@
   import 'swiper/dist/css/swiper.css'
     export default {
         name: "StyleRecommendSwiper",
-      mounted(){
+        mounted(){
         var mySwiper = new Swiper ('.swiper-container', {
           direction: 'horizontal',
           loop: true,

@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld></HelloWorld>
+  <RadioDetail></RadioDetail>
 </template>
 
 <script>
-import HelloWorld from './page/HelloWorld';
+import RadioDetail from './page/RadioDetail'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    RadioDetail
   }
 }
 </script>
