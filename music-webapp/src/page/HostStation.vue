@@ -10,7 +10,7 @@
 <script>
   import StyleRecommendHeader from '../components/StyleRecommendHeader'
   import StyleRecommendStyle from '../components/StyleRecommendStyle'
-  // import HostStationSection from '../components/HostStationSection'
+  import HostStationSection from '../components/HostStationSection'
   import Footer from '../components/Footer'
 export default {
   name: 'HostStation',

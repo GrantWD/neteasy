@@ -18,7 +18,7 @@
     export default {
         name: "RadioClassHotClassify",
         props:{
-        classifyarr:Object
+          classifyarr:Object
       }
     }
 </script>

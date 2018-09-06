@@ -4,7 +4,7 @@
     <div class="box">
       <div>
         <MyMusicConList></MyMusicConList>
-        <MyMusicCreateList v-for="listarr in arr" :listarr="listarr"></MyMusicCreateList>
+        <MyMusicCreateList v-for="listarr in arr" :key="listarr.index" :listarr="listarr"></MyMusicCreateList>
       </div>
     </div>
     <Footer></Footer>

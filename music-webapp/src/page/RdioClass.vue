@@ -11,14 +11,12 @@
 <script>
   import MyMusicHeader from '../components/MyMusicHeader'
   import RadioClassHotClassify from '../components/RadioClassHotClassify'
-  import RadioClassDetail from '../components/RadioClassDetail'
   import Footer from '../components/Footer'
   export default {
     name: 'HelloWorld',
     components:{
       MyMusicHeader,
       RadioClassHotClassify,
-      // RadioClassDetail,
       Footer
     },
     data(){
