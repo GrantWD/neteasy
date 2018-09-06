@@ -2,15 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import StyleRecommend from '../page/StyleRecommend'
 import HostStation from '../page/HostStation'
-import MyMusic from '../page/MyMusic'
 import DailySpecial from '../page/DailySpecial'
+import MyMusic from '../page/MyMusic'
 
 
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'StyleRecommend',
       component: StyleRecommend
