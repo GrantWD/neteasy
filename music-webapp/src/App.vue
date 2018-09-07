@@ -5,11 +5,11 @@
 </template>
 
 <script>
-  import RadioDetail from './page/RadioDetail'
+  import MyMusic from './page/MyMusic'
   export default {
     name: 'App',
     components:{
-      RadioDetail
+      MyMusic
     }
   }
 </script>
