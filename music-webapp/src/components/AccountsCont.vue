@@ -2,7 +2,7 @@
   <div class="content">
     <accounts-cont-one></accounts-cont-one>
     <accounts-cont-two></accounts-cont-two>
-    <accounts-cont-there v-for="obj in accountSelect" :key="obj.index" :obj="obj"></accounts-cont-there>
+    <accounts-cont-there></accounts-cont-there>
     <accounts-cont-four></accounts-cont-four>
   </div>
 </template>
@@ -22,18 +22,8 @@
     },
     data(){
       return {
-        accountSelect:[
-          {
-            name:"我的消息",
-            subName:"",
-            iconUrl:"../../static/images/more.jpg",
-          },
-          {
-            name:"会员中心",
-            subName:"",
-            iconUrl:"../../static/images/more.jpg",
-          }
-        ]
+
+
       }
     }
     // methods: {

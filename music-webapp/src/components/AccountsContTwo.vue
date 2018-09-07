@@ -3,7 +3,7 @@
     <li><a href="#"><span class="s1">动态</span><span class="s2">0</span></a></li>
     <li><a href="#"><span class="s1">关注</span><span class="s2">0</span></a></li>
     <li><a href="#"><span class="s1">粉丝</span><span class="s2">0</span></a></li>
-    <li><a href="#"><span class="s1">动态</span><span class="s1">我的资料</span></a></li>
+    <li><a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-pencil"></use> </svg><span class="s1">我的资料</span></a></li>
   </ul>
 </template>
 
@@ -34,7 +34,7 @@
     background: #ffffff;
     li{
       flex: 1;
-      height:0.29rem;
+      height:0.36rem;
       border-right: 1px solid #e2e3e4;
       a{
         display: flex;
