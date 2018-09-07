@@ -48,7 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
-   .centent{
+   .content{
      background:#eeeff0;
      flex:1;
      overflow-y: scroll;

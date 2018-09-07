@@ -31,5 +31,69 @@
 </script>
 
 <style lang="scss" scoped>
+  .cn1{
+    background: #ffffff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:0.98rem;
+    border-bottom: 1px solid #e2e3e4;
+    .left{
+      margin-left:0.15rem;
+      display: flex;
+      a{
+        width: 0.6rem;
+        height:0.6rem;
+        margin-right:0.1rem;
+        line-height: 0.6rem;
+        img{
+          width: 100%;
+        }
+      }
+      .left-p{
+        display: flex;
+        flex-direction: column;
 
+        .p1{
+          display: block;
+          line-height:0.35rem;
+          color: #000000;
+          font-size: 0.15rem;
+        }
+        .p2{
+          display: block;
+          width: 45%;
+          line-height:0.16rem;
+          text-align: center;
+          color: #999999;
+          font-size: 0.15rem;
+          border: 1px solid #999999;
+          height:0.16rem;
+          border-radius: 0.08rem;
+        }
+      }
+    }
+    .right{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.1rem;
+      height:0.24rem;
+      width: 0.61rem;
+      text-align: center;
+      font-size: 0.1rem;
+      color:#d33a31;
+      line-height: 0.24rem;
+      border-radius: 0.12rem;
+      border: 1px solid #d33a31;
+      img{
+        display: block;
+        width: 0.12rem;
+      }
+      span{
+        display: block;
+        margin-left: 0.1rem;
+      }
+    }
+  }
 </style>

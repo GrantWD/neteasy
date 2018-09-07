@@ -27,5 +27,34 @@
 </script>
 
 <style lang="scss" scoped>
+  .cn2{
+    display: flex;
+    align-items: center;
+    height:0.5rem;
+    background: #ffffff;
+    li{
+      flex: 1;
+      height:0.29rem;
+      border-right: 1px solid #e2e3e4;
+      a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span{
+          display: block;
+          font-size: 0.11rem;
+          text-align: center;
+        }
+        .s1{
+          color:#979798;
+        }
+        .s2{
+          color:#323233;
+          font-weight: bold;
+        }
 
+      }
+    }
+  }
 </style>

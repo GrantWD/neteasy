@@ -1,10 +1,7 @@
 <template>
-
-    <div class="content">
-      <FriendContOne></FriendContOne>
-    </div>
-
-
+  <div class="content">
+    <FriendContOne></FriendContOne>
+  </div>
 </template>
 
 <script>
@@ -33,6 +30,10 @@
 <style lang="scss" scoped>
   .content{
     width: 100%;
+    flex:1;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: scroll;
   }
 
 </style>
