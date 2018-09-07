@@ -1,7 +1,7 @@
 <template>
     <div class="HelloWorldSection">
       <StyleRecommendSwiper></StyleRecommendSwiper>
-      <HostStationDay></HostStationDay>
+      <HostStationDay :sssA="HostStationDay"></HostStationDay>
       <HostStationOptimization></HostStationOptimization>
       <HostStationMusic v-for="(HostStationMusic,index) in HostStationMusic" :key="HostStationMusic.index" :HostStationMusic="HostStationMusic"></HostStationMusic>
       <RadioClassHotClassify v-for="classifyarr in arr" :key="classifyarr.index" :classifyarr="classifyarr"></RadioClassHotClassify>
@@ -101,26 +101,26 @@
             RadioClassDetai2:[
               {},{},{},{},{},{},{}
             ],
-            StyleRecommendDay:[
+            HostStationDay:[
               {
-                to:'/HostStation',
+                to:'/RdioClass',
                 img:'../../static/images/StyleRecommendDay1.gif',
-                name:'私人FM',
+                name:'电台分类',
               },
               {
-                to:'/HostStation',
+                to:'',
                 img:'../../static/images/StyleRecommendDay2.gif',
-                name:'每日推荐',
+                name:'电台排行',
               },
               {
-                to:'/MusicList',
+                to:'',
                 img:'../../static/images/StyleRecommendDay3.gif',
-                name:'歌单',
+                name:'付费精品',
               },
               {
-                to:'/HostStation',
+                to:'',
                 img:'../../static/images/StyleRecommendDay4.gif',
-                name:'排行榜',
+                name:'小冰电台',
               },
             ],
             arr:[

@@ -1,6 +1,6 @@
 <template>
   <div class="HostStationDay">
-    <a href="#" v-for="HostStationDay in HostStationDay">
+    <a href="#" v-for="HostStationDay in sssA">
       <router-link :to="HostStationDay.to">
         <div class="HostStationDay1Div"><img :src="HostStationDay.img" alt=""></div>
         <span class="HostStationDay1Span">{{HostStationDay.name}}</span>
@@ -14,30 +14,12 @@
     name: "HostStationDay",
     data(){
       return{
-        HostStationDay:[
-          {
-            to:'/RdioClass',
-            img:'../../static/images/StyleRecommendDay1.gif',
-            name:'电台分类',
-          },
-          {
-            to:'',
-            img:'../../static/images/StyleRecommendDay2.gif',
-            name:'电台排行',
-          },
-          {
-            to:'',
-            img:'../../static/images/StyleRecommendDay3.gif',
-            name:'付费精品',
-          },
-          {
-            to:'',
-            img:'../../static/images/StyleRecommendDay4.gif',
-            name:'小冰电台',
-          },
-        ]
+
       }
     },
+    props:{
+      sssA:Array
+    }
   }
 </script>
 
