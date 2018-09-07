@@ -8,13 +8,13 @@
 					<!-- 将图片和标题都嵌套在a标签中点击链接到同一个链接的 -->
 					<a class="lk" href="javascript:void(0)">
 						<div class="lazyimg">
-							<img class="lazyimg-img" :src='musicListInfo.listImgUrl' alt="这是一张图片">
+							<img class="lazyimg-img" :src='playlist.coverImgUrl' alt="这是一张图片">
 						</div>
 						<div class="info">
 							<div class="info-l">
-								<p class="listName"><span class="icon queen"></span>{{ musicListInfo.listName }}<span class="icon next"></span></p>
-								<p class="info-tit">{{musicListInfo.listTit}}</p>
-								<p class="info-subtit">{{musicListInfo.listSubTit}}</p>
+								<p class="listName"><span class="icon queen"></span>{{ playlist.listTitle }}<span class="icon next"></span></p>
+								<p class="info-tit">{{playlist.name}}</p>
+								<p class="info-subtit">{{playlist.subDesc}}</p>
 							</div>
 						</div>
 					</a>
@@ -22,20 +22,20 @@
 				
 			</div>
 			<div class="listType">
-				<div class="type"><span class="text">{{ musicListInfo.listType.type }}</span><span class="icon"></span></div>
+				<div class="type"><span class="text">{{ playlist.listName }}</span><span class="icon"></span></div>
 				<div class="typeItem">
-					<a  v-for="(item, index) in musicListInfo.listType.typeArray">{{ item }}</a>
+					<a  v-for="(item, index) in playlist.tags">{{ item }}</a>
 				</div>
 			</div>
 			 <ul class="musicList">
 				<div class="inner">
-					<li v-for="(list,index) in musicListInfo.musicMsgArray">
+					<li v-for="(list,index) in catlist">
 						<div class="musicPic">
-							<img :src='list.musicPicUrl' alt="">
-							<div class="listenNum"><span class="icon"></span><span class="num">{{ list.listenNum }}</span></div>
-							<div class="musicType"><span class="icon"></span><span class="type">{{ list.musicType }}</span></div>
+							<img :src='list.coverImgUrl' alt="">
+							<div class="listenNum"><span class="icon"></span><span class="num">{{ list.playCount }}</span></div>
+							<div class="musicType"><span class="icon"></span><span class="type">{{ list.creator.nickname }}</span></div>
 						</div>
-						<p class="musicDesc">{{ list.musicDesc }}</p>
+						<p class="musicDesc">{{ list.name }}</p>
 					</li>
 				</div>
         	</ul> 
@@ -50,68 +50,46 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      musicListInfo:{
-        listName:'精品歌单',
-        listTit:'失落少年孤独心俱乐部',
-        listSubTit:'欢迎加入失落少年孤独心俱乐部',
-        listImgUrl:'http://img11.360buyimg.com/jdcms/s170x170_jfs/t16006/110/995107245/352305/c07386d3/5a460b35N7d0aa2bf.jpg!q90!cc_170x170.webp',
-        listType:{
-          type:'轻音乐',
-          typeArray:['华语','影视原声','民谣']
-        },
-        musicMsgArray:[
-        {	
-          musicId:201809001,
-          musicPicUrl:'http://p1.music.126.net/CvQvHLu8ni8J1e_ytMhLPQ==/109951163532159779.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'50万',
-          musicType:'萝莉音',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-        {
-          musicId:201809002,
-          musicPicUrl:'http://p1.music.126.net/4HTyupyD-UOMJQICmscT8w==/109951163020513888.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'20万',
-          musicType:'轻音乐',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-        {
-          musicId:201809003,
-          musicPicUrl:'http://p1.music.126.net/2fypBTo8GNQ7QiEs41INDw==/19182079858548695.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'20万',
-          musicType:'轻音乐',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-        {
-          musicId:201809003,
-          musicPicUrl:'http://p1.music.126.net/2fypBTo8GNQ7QiEs41INDw==/19182079858548695.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'20万',
-          musicType:'轻音乐',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-        {
-          musicId:201809003,
-          musicPicUrl:'http://p1.music.126.net/2fypBTo8GNQ7QiEs41INDw==/19182079858548695.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'20万',
-          musicType:'轻音乐',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-        {
-          musicId:201809003,
-          musicPicUrl:'http://p1.music.126.net/2fypBTo8GNQ7QiEs41INDw==/19182079858548695.webp?imageView&thumbnail=369x0&quality=75&tostatic=0&type=webp',
-          listenNum:'20万',
-          musicType:'轻音乐',
-          musicDesc:"橙光游戏《君心我心》日常更新BGM"
-        },
-      ]
-
-      }
+		playlist:{},
+		catlist:[],
+		StyleRecommendDay:[]
+		
     }
   },
   components: {
 	  Footer,
 	  PlayListHeader
+  },
+  created () {
+	//   fetch("http://localhost:3000/musiclist").then((res)=>{
+	// 	  console.log(res.json())
+	// 	//   return res.json()
+	// 	  console.log(res.data)
+	//   }).then((res)=>{
+	// 	  console.log
+	//   });
+		$.get('http://localhost:3000/heightquality', (data)=> {
+				// console.log(data);
+				// console.log(data.status)
+				this.playlist=data.obj.playlist
+				// console.log(this.playlist);
+		});
+
+		// 所有歌单数据
+		$.get('http://localhost:3000/catlist', (data)=> {
+				// console.log(data);
+				this.catlist=data.obj.playlists
+				// console.log(this.catlist);
+				
+		});
+		$.get('http://localhost:3000/zfy',(data)=>{
+			console.log(data);
+			this.StyleRecommendDay=data.obj.StyleRecommendDay;
+			console.log(this.StyleRecommendDay)
+		});
+		
   }
-}
+}  
 </script>
  
 <style lang='scss' scoped>
@@ -282,6 +260,8 @@ export default {
        		}
 			.musicDesc{
 				margin-top: .05rem;
+				padding: 0 .05rem;
+				height:.2rem;
 			}
       	}
     }

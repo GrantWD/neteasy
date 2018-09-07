@@ -5,9 +5,14 @@ var fs = require('fs');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var testRouter = require('./routes/test');
+var heightqualityRouter = require('./routes/heightquality');
+var personalizedRouter = require('./routes/personalized');
+var newsongRouter = require('./routes/newsong');
+var catlistRouter = require('./routes/catlist');
+var mymusicRouter = require('./routes/mymusic');
+var radioclassRouter = require('./routes/radioclass');
+var radiodetailRouter = require('./routes/radiodetail');
+var zfyRouter = require('./routes/zfy');
 
 var app = express();
 // 跨域设置
@@ -23,19 +28,20 @@ app.all('*', function (req, res, next) {
   
 });
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/test', testRouter);
+
+app.use('/heightquality', heightqualityRouter);
+app.use('/personalized', personalizedRouter);
+app.use('/newsong', newsongRouter);
+app.use('/catlist', catlistRouter);
+app.use('/mymusic', mymusicRouter);
+app.use('/radioclass', radioclassRouter);
+app.use('/radiodetail', radiodetailRouter);
+app.use('/zfy', zfyRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
