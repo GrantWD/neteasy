@@ -5,12 +5,11 @@
 </template>
 
 <script>
-  import StyleRecommend from './page/StyleRecommend'
   export default {
     name: 'App',
     components:{
-      StyleRecommend,
-    }
+
+    },
   }
 </script>
 

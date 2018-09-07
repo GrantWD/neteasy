@@ -12,38 +12,12 @@
         <p>{{listarrdel.text2}}</p>
       </div>
     </div>
-    <!--<MyMusicCreateListOne v-for="crlitarr in arr" :crlitarr="crlitarr"></MyMusicCreateListOne>-->
   </div>
 </template>
 
 <script>
-    // import MyMusicCreateListOne from './MyMusicCreateListOne'
     export default {
         name: "MyMusicCreateList",
-        // data(){
-        //   return{
-        //     arr:[
-        //       {
-        //         imgSrc8:'../../static/images/ajMuHeart.png',
-        //         tit2:'我喜欢的音乐',
-        //         text2:'59首，已下载25首'
-        //       },
-        //       {
-        //         imgSrc8:'../../static/images/ajMuRed.png',
-        //         tit2:'说散就散',
-        //         text2:'2首'
-        //       },
-        //       {
-        //         imgSrc8:'../../static/images/ajMuPerson.png',
-        //         tit2:'我爱祖国',
-        //         text2:'59首，已下载1首'
-        //       }
-        //     ]
-        //   }
-        // },
-        // components:{
-        //   MyMusicCreateListOne
-        // },
         props:{
           listarr:Object
         }

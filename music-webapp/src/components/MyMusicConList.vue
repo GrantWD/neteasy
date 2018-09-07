@@ -1,6 +1,6 @@
 <template>
   <div class="MyMusicConList">
-    <MyMusicConListOne v-for="obj in arr"  :obj="obj"></MyMusicConListOne>
+    <MyMusicConListOne v-for="obj in arr" :key="obj.index" :obj="obj"></MyMusicConListOne>
   </div>
 </template>
 

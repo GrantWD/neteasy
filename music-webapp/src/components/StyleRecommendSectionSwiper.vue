@@ -19,7 +19,6 @@
     mounted(){
       var mySwiperAAA = new Swiper ('.fy', {
         autoHeight: true,
-
       })
     },
     components:{

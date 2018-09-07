@@ -127,7 +127,7 @@
     display:flex;
   }
   .RadioDetailBox{
-    width:100%;s
+    width:100%;
     height:100%;
     display:flex;
     flex:1;

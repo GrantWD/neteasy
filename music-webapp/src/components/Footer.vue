@@ -1,25 +1,35 @@
 <template>
     <footer>
-       <div class="find current" @click="select($event)">
+      <router-link to="/">
+        <div class="find current" @click="select($event)">
           <div class="img"></div>
           <p>发现</p>
-       </div>
-       <div class="video" @click="select">
-           <div class="img"></div>
-           <p>视频</p>
-       </div>
-       <div class="my" @click="select">
-           <div class="img"></div>
-           <p>我的</p>
-       </div>
-       <div class="friend" @click="select">
-           <div class="img"></div>
-           <p>朋友</p>
-       </div>
-       <div class="account" @click="select">
-           <div class="img"></div>
-           <p>账号</p>
-       </div>
+        </div>
+      </router-link>
+      <router-link to="/VideoRecommend">
+        <div class="video" @click="select">
+          <div class="img"></div>
+          <p>视频</p>
+        </div>
+      </router-link>
+      <router-link to="/MyMusic">
+        <div class="my" @click="select">
+          <div class="img"></div>
+          <p>我的</p>
+        </div>
+      </router-link>
+      <router-link to="/Friend">
+        <div class="friend" @click="select">
+          <div class="img"></div>
+          <p>朋友</p>
+        </div>
+      </router-link>
+      <router-link to="/Account">
+        <div class="account" @click="select">
+          <div class="img"></div>
+          <p>账号</p>
+        </div>
+      </router-link>
     </footer>
 </template>
 
@@ -35,7 +45,7 @@
             }
         }
     }
-    
+
 </script>
 
 <style lang="scss" scoped>
@@ -52,21 +62,21 @@
         background: $gbColor;
         border-top: 1px solid $borderColor;
         text-align: center;
-        
+
         .img{
             margin:.06rem auto 0;
             width: $imgSize;
             height: $imgSize;
             background-size: 100%;
-            
+
         };
         p {
             padding:7px 0;
             font-size: .1rem;
             color: $color;
         }
-    
-       
+
+
         .find{
             .img{
                 background-image: url(#{$backgroundUrl}wyy2.png);
