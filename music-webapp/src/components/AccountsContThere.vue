@@ -32,5 +32,37 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .cn3{
+    margin-top:0.1rem;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    P{
+      height:0.45rem;
+      width:100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a{
+      display: flex;
+      margin:0 0.1rem;
+      img{
+        width: 0.2rem;
+        display: block;
+      }
+      .imgc2{
+        width: 8px;
+      }
+      .imgc3{
+        width: 0.51rem;
+      }
+      span{
+        display: block;
+        font-size: 0.14rem;
+        color:#323233;
+        margin: 0 0.12rem;
+      }
+    }
+  }
 </style>

@@ -8,6 +8,9 @@ import PlayerMusic from '../page/PlayerMusic'
 import VideoRecommend from '../page/VideoRecommend'
 import Friend from '../page/Friend'
 import Account from '../page/Account'
+import RdioClass from '../page/RdioClass'
+import RadioDetail from '../page/RadioDetail'
+import MusicList from '../page/MusicList'
 
 
 Vue.use(Router)
@@ -54,5 +57,20 @@ export default new Router({
       name: 'Account',
       component: Account
     },
+    {
+      path:'/RdioClass',
+      name:'RdioClass',
+      component:RdioClass
+    },
+    {
+      path:'/RadioDetail',
+      name:'RadioDetail',
+      component:RadioDetail
+    },
+    {
+      path:'/MusicList',
+      name:'MusicList',
+      component:MusicList
+    }
   ]
 })

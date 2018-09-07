@@ -1,9 +1,11 @@
 <template>
     <header>
-         <div class="head-l"></div>      
+        <router-link to="/">
+          <div class="head-l"></div>
+        </router-link>
         <div class="head-m">歌单</div>
         <router-link to="/PlayerMusic">
-            <div class="head-r"></div>        
+            <div class="head-r"></div>
         </router-link>
     </header>
 </template>
@@ -16,7 +18,7 @@
         methods: {
         }
     }
-    
+
 </script>
 
 <style lang="scss" scoped>

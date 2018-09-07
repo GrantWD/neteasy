@@ -26,7 +26,7 @@
                 name:'每日推荐',
               },
               {
-                to:'',
+                to:'MusicList',
                 img:'../../static/images/StyleRecommendDay3.gif',
                 name:'歌单',
               },

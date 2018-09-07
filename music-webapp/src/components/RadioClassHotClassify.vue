@@ -2,15 +2,19 @@
     <div class="RadioClassHotClassify">
       <p>{{classifyarr.tit3}}</p>
       <div class="RadioClassDetail"  v-for="classifyarrdel in classifyarr.arrdel">
-        <div class="RadioClassDetailBlock">
-          <img :src="classifyarrdel.imgSrc9" alt=""/>
-          <p>{{classifyarrdel.tit4}}</p>
-        </div>
+        <router-link :to="classifyarrdel.to">
+          <div class="RadioClassDetailBlock">
+            <img :src="classifyarrdel.imgSrc9" alt=""/>
+            <p>{{classifyarrdel.tit4}}</p>
+          </div>
+        </router-link>
         <img class="RadioClassDetailImgLine" :src="classifyarr.imgSrc11" alt="">
-        <div class="RadioClassDetailBlockF">
-          <img :src="classifyarrdel.imgSrc10" alt=""/>
-          <p>{{classifyarrdel.tit5}}</p>
-        </div>
+        <router-link :to="classifyarrdel.to">
+          <div class="RadioClassDetailBlockF">
+            <img :src="classifyarrdel.imgSrc10" alt=""/>
+            <p>{{classifyarrdel.tit5}}</p>
+          </div>
+        </router-link>
       </div>
     </div>
 </template>
