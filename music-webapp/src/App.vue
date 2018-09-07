@@ -1,3 +1,4 @@
+
 <template>
   <div id="app">
     <router-view></router-view>
@@ -5,12 +6,11 @@
 </template>
 
 <script>
-  import MyMusic from './page/MyMusic'
   export default {
     name: 'App',
     components:{
-      MyMusic
-    }
+
+    },
   }
 </script>
 
@@ -19,3 +19,4 @@
     height: 100%;
   }
 </style>
+

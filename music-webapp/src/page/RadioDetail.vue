@@ -53,13 +53,6 @@
     },
     data(){
       return{
-        tit:[
-          {
-            ord: "我的音乐",
-            imgSrc1: '../../static/images/back.png',
-            imgSrc2: '../../static/images/aj_rank.png'
-          }
-        ],
         arr: [
           {
             imgSrc1:'../../static/images/ajRDListOne.png',

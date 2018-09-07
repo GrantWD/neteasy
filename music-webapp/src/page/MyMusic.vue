@@ -26,13 +26,6 @@
     },
     data(){
       return{
-        tit:[
-          {
-            ord: "3D|电子",
-            imgSrc1: '../../static/images/back.png',
-            imgSrc2: '../../static/images/aj_rank.png'
-          }
-        ],
         arr:[
           {
             imgSrc5:'../../static/images/ajError.png',

@@ -21,5 +21,17 @@
 </script>
 
 <style lang="scss" scoped>
-
+  .cn7{
+    margin: 0.1rem 0;
+    background: #ffffff;
+    height:0.45rem;
+    a{
+      display: block;
+      line-height:0.49rem;
+      text-align: center;
+      color:#d33a31;
+      font-size: 0.15rem;
+      font-weight: bold;
+    }
+  }
 </style>
