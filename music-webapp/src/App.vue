@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <MusicList :musicListInfo='musicListInfo'></MusicList>
 </template>
 <script>
@@ -25,6 +26,23 @@ export default {
 </script>
 
 <style scoped lang="scss">
+=======
+  <div id="app">
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'App',
+    components:{
+
+    },
+  }
+</script>
+
+<style scoped>
+>>>>>>> 62dfd8a70c99dd0bb29550fb429acb6f52fdd035
   #app{
     height: 100%;
   }

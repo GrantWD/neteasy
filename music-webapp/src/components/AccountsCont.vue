@@ -2,7 +2,7 @@
   <div class="content">
     <accounts-cont-one></accounts-cont-one>
     <accounts-cont-two></accounts-cont-two>
-    <accounts-cont-there v-for="obj in accountSelect" :obj="obj"></accounts-cont-there>
+    <accounts-cont-there v-for="obj in accountSelect" :key="obj.index" :obj="obj"></accounts-cont-there>
     <accounts-cont-four></accounts-cont-four>
   </div>
 </template>
@@ -48,7 +48,7 @@
 </script>
 
 <style lang="scss" scoped>
-   .centent{
+   .content{
      background:#eeeff0;
      flex:1;
      overflow-y: scroll;

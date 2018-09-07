@@ -16,24 +16,24 @@
       return{
         HostStationDay:[
           {
-            to:'',
+            to:'/RdioClass',
             img:'../../static/images/StyleRecommendDay1.gif',
-            name:'私人FM',
+            name:'电台分类',
           },
           {
             to:'',
             img:'../../static/images/StyleRecommendDay2.gif',
-            name:'每日推荐',
+            name:'电台排行',
           },
           {
             to:'',
             img:'../../static/images/StyleRecommendDay3.gif',
-            name:'歌单',
+            name:'付费精品',
           },
           {
             to:'',
             img:'../../static/images/StyleRecommendDay4.gif',
-            name:'排行榜',
+            name:'小冰电台',
           },
         ]
       }

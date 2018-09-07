@@ -1,9 +1,8 @@
 <template>
     <div class="playerHeader">
-         <router-link to="/">  
-            <div class="head-l"></div>     
+         <router-link to="/">
+            <div class="head-l"></div>
         </router-link>
-      
         <div class="head-m">
             <p class="musicName">{{ musicName }}</p>
             <p class="singer">{{ singer }}<span class="icon"></span></p>
@@ -65,7 +64,7 @@ $iconSize: .24rem;
                     background-image: url(#{$backgroundUrl}next20×20.png);
                     background-size: 100%;
                     vertical-align: middle;
-              
+
                 }
             }
         }

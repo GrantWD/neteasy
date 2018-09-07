@@ -2,7 +2,9 @@
     <div class="MyMusicHeader">
       <img :src="imgSrc1" alt=""/>
       <p>{{ord}}</p>
-      <img :src="imgSrc2" alt=""/>
+      <router-link to="/PlayerMusic">
+        <img :src="imgSrc2" alt=""/>
+      </router-link>
     </div>
 </template>
 

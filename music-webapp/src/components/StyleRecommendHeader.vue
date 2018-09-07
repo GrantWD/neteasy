@@ -4,9 +4,11 @@
       <img class="StyleRecommendHeaderImg" src="../../static/images/StyleRecommendHeader1.png" alt="">
       <div class="StyleRecommendHeader1Div">
         <img src="../../static/images/StyleRecommendHeader3.png" alt="">
-        <input placeholder="有没有 最近很火哦" type="text">
+        <input :placeholder="Section" type="text">
       </div>
-      <img class="StyleRecommendHeaderImg" src="../../static/images/StyleRecommendHeader2.png" alt="">
+      <router-link to="/PlayerMusic">
+        <img class="StyleRecommendHeaderImg" src="../../static/images/StyleRecommendHeader2.png" alt="">
+      </router-link>
     </div>
   </div>
   <!--img图片没有添加-->
@@ -14,7 +16,12 @@
 
 <script>
     export default {
-        name: "StyleRecommendHeader"
+        name: "StyleRecommendHeader",
+      data(){
+          return{
+            Section:'有没有 最近很火哦',
+          }
+      }
     }
 </script>
 
