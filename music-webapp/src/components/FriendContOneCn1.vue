@@ -6,7 +6,7 @@
           <p>
             <span class="s1">吴木蓝君</span>
             <span class="s1 s2">分享单曲：</span> <br>
-            <span lass="s3">8月30日</span>
+            <span class="s3">8月30日</span>
           </p>
         </a>
         <a class="aright" href="#">+ 关注</a>
