@@ -8,7 +8,7 @@
            <div class="bd-r">
                 <Search></Search>
                 <Operate></Operate>
-                <Table :info = 'info'></Table>
+                <Table :playlists = 'playlists'></Table>
                 <PageTurner></PageTurner>
            </div>
 	    <Edit v-show='flag'></Edit>
@@ -29,7 +29,8 @@ export default {
   name: 'page',
   data () {
     return {
-        flag:true,
+		flag:true,
+		playlists:[],
         info:[
 			{
 				id:588558,
@@ -138,6 +139,16 @@ export default {
       add () {
           flag:true
       }
+  },
+  created () {
+	  fetch('http://localhost:3000/catlist')
+	  	.then((res)=>{
+			  return res.json()
+		  })
+		.then((res)=>{
+			this.playlists = res.obj.playlists;
+			console.log(this.playlists)
+		})
   }
 }
 </script>

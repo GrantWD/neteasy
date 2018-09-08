@@ -16,6 +16,7 @@ var zfyRouter = require('./routes/zfy');
 var videoRouter = require('./routes/video');
 var hostStationRouter = require('./routes/hoststation');
 var dayRecommendRouter = require('./routes/dayrecommend');
+var rankingRouter = require('./routes/ranking');
 
 var app = express();
 // 跨域设置
@@ -48,6 +49,7 @@ app.use('/zfy', zfyRouter);
 app.use('/video', videoRouter);
 app.use('/hoststation', hostStationRouter);
 app.use('/dayrecommend', dayRecommendRouter);
+app.use('/ranking', rankingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
