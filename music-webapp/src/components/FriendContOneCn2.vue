@@ -2,47 +2,7 @@
   <div class="con--">
     <ul class="con12">
       <li>
-        <a class="delete" href="#">X</a>
-        <a class="pic" href="#">
-          <img src="../../static/images/ul1.jpg" alt="">
-          <span></span>
-        </a>
-        <h6>南措卓玛</h6>
-        <p class="pd">拘束你听过《我们欢聚在这里的故事》</p>
-        <a class="follows" href="#">+ 关注</a>
-      </li>
-      <li>
-        <a class="delete" href="#">X</a>
-        <a class="pic" href="#">
-          <img src="../../static/images/ul1.jpg" alt="">
-          <span></span>
-        </a>
-        <h6>南措卓玛</h6>
-        <p class="pd">拘束你听过《我们欢聚在这里的故事》</p>
-        <a class="follows" href="#">+ 关注</a>
-      </li>
-      <li>
-        <a class="delete" href="#">X</a>
-        <a class="pic" href="#">
-          <img src="../../static/images/ul1.jpg" alt="">
-          <span></span>
-        </a>
-        <h6>南措卓玛</h6>
-        <p class="pd">拘束你听过《我们欢聚在这里的故事》</p>
-        <a class="follows" href="#">+ 关注</a>
-      </li>
-      <li>
-        <a class="delete" href="#">X</a>
-        <a class="pic" href="#">
-          <img src="../../static/images/ul1.jpg" alt="">
-          <span></span>
-        </a>
-        <h6>南措卓玛</h6>
-        <p class="pd">拘束你听过《我们欢聚在这里的故事》</p>
-        <a class="follows" href="#">+ 关注</a>
-      </li>
-      <li>
-        <a class="delete" href="#">X</a>
+        <a class="delete" href="#"><svg class="icon " aria-hidden="true" @click="select"> <use xlink:href="#icon-chuyidong"></use> </svg></a>
         <a class="pic" href="#">
           <img src="../../static/images/ul1.jpg" alt="">
           <span></span>
@@ -64,13 +24,10 @@
               // texts1:"账号",
               // imgsSrc1:"../../static/images/ajMusic.png"
             }
+        },
+        methods: {
+            // 选择方法中，进行路由的切换
         }
-        // methods: {
-        //     // 选择方法中，进行路由的切换
-        //     select(e){
-        //         $(e.currentTarget).addClass('current').siblings().removeClass('current');
-        //     }
-        // }
     }
 
 </script>

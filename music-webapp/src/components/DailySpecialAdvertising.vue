@@ -1,6 +1,6 @@
 <template>
     <div class="DailySpecialAdvertising">
-      <img :src="img" alt="">
+      <img :src="sssB.img" alt="">
     </div>
 </template>
 
@@ -9,8 +9,11 @@
         name: "DailySpecialAdvertising",
       data(){
           return{
-            img:'http://p1.music.126.net/gdpGtI8Yo5ciy0GNe3FUbg==/109951163534380906.jpg',
+
           }
+      },
+      props:{
+        sssB:Object
       }
     }
 </script>

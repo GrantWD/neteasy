@@ -1,126 +1,106 @@
 <template>
     <div class="HelloWorldSection">
-      <StyleRecommendSwiper></StyleRecommendSwiper>
-      <HostStationDay></HostStationDay>
-      <HostStationOptimization></HostStationOptimization>
+      <StyleRecommendStyle></StyleRecommendStyle>
+      <HostStationSwiper></HostStationSwiper>
+      <HostStationDay :sssA="HostStationDay"></HostStationDay>
+      <HostStationOptimization :brr="brr"></HostStationOptimization>
       <HostStationMusic v-for="(HostStationMusic,index) in HostStationMusic" :key="HostStationMusic.index" :HostStationMusic="HostStationMusic"></HostStationMusic>
       <RadioClassHotClassify v-for="classifyarr in arr" :key="classifyarr.index" :classifyarr="classifyarr"></RadioClassHotClassify>
     </div>
 </template>
 
 <script>
-  import StyleRecommendSwiper from './StyleRecommendSwiper'
+  import HostStationSwiper from './HostStationSwiper'
   import HostStationDay from './HostStationDay'
   import HostStationOptimization from './HostStationOptimization'
   import HostStationMusic from './HostStationMusic'
   import RadioClassHotClassify from './RadioClassHotClassify'
+  import StyleRecommendStyle from './StyleRecommendStyle'
     export default {
         name: "HostStationSection",
       components:{
-        StyleRecommendSwiper,
+        HostStationSwiper,
         HostStationDay,
         HostStationOptimization,
         HostStationMusic,
         RadioClassHotClassify,
+        StyleRecommendStyle,
       },
       data(){
           return{
             HostStationMusic:[
               {
-                ClassName:'有声书1',
+                ClassName:'有声书',
                 arr:[
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection4.png',
+                    name:'爷爷让我娶女鬼当媳妇'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection5.png',
+                    name:'修仙觅长生，热血任逍遥'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection6.png',
+                    name:'黑与白的界限，彻底颠覆你的世界观'
                   },
                 ]
               },
               {
-                ClassName:'有声书2',
+                ClassName:'知识技能',
                 arr:[
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection7.png',
+                    name:'自信沟通力，聊天不费力'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection8.png',
+                    name:'将全宇宙的设计故事讲给你听'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection9.png',
+                    name:'关于身体你应该知道的事'
                   },
                 ]
               },
               {
-                ClassName:'有声书3',
+                ClassName:'商业财经',
                 arr:[
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection10.png',
+                    name:'央视品牌顾问的财经观察'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection11.png',
+                    name:'互联网圈内幕的犀利观察和思考'
                   },
                   {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                ]
-              },
-              {
-                ClassName:'有声书4',
-                arr:[
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
+                    Img:'../../static/images/HostStationSection12.png',
+                    name:'创业的干货知识'
                   },
                 ]
               },
             ],
-            RadioClassDetail:[
-              {},{},{}
-            ],
-            RadioClassDetai2:[
-              {},{},{},{},{},{},{}
-            ],
-            StyleRecommendDay:[
+            HostStationDay:[
               {
-                to:'/HostStation',
-                img:'../../static/images/StyleRecommendDay1.gif',
-                name:'私人FM',
+                to:'/RdioClass',
+                img:'../../static/images/HostStationDay1.png',
+                name:'电台分类',
               },
               {
-                to:'/HostStation',
-                img:'../../static/images/StyleRecommendDay2.gif',
-                name:'每日推荐',
+                to:'',
+                img:'../../static/images/HostStationDay2.png',
+                name:'电台排行',
               },
               {
-                to:'/MusicList',
-                img:'../../static/images/StyleRecommendDay3.gif',
-                name:'歌单',
+                to:'',
+                img:'../../static/images/HostStationDay3.png',
+                name:'付费精品',
               },
               {
-                to:'/HostStation',
+                to:'',
                 img:'../../static/images/StyleRecommendDay4.gif',
-                name:'排行榜',
+                name:'小冰电台',
               },
             ],
             arr:[
@@ -199,6 +179,26 @@
                   },
                 ]
               }
+            ],
+            brr:[
+              {
+                Img:'../../static/images/HostStationSection1.png',
+                name:'过三情感脱口秀',
+                program:'节目:41',
+                introduce:'喻舟X桑丹X丁丁张情感脱口秀',
+              },
+              {
+                Img:'../../static/images/HostStationSection2.png',
+                name:'睡不着电台',
+                program:'节目:446',
+                introduce:'睡不着么，来听故事吧',
+              },
+              {
+                Img:'../../static/images/HostStationSection3.png',
+                name:'MTkoala的休息小屋',
+                program:'节目:110',
+                introduce:'戴上耳机，享受不一样的感觉',
+              },
             ],
           }
       }

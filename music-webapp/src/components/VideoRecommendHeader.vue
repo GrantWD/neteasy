@@ -3,7 +3,7 @@
     <div class="top">
       <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg></a>
       <form><input class="seach" type="button" ><input class="texts" type="text" value="有没有 最近很火偶"></form>
-      <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-stzddq-d"></use> </svg></a>
+      <a href="#"><img :src="imgsSrc1" alt=""></a>
     </div>
     <ul class="nav">
       <li><a  class="active" href="#">推荐</a></li>
@@ -25,7 +25,7 @@
         data(){
             return {
               // texts1:"账号",
-              // imgsSrc1:"../../static/images/ajMusic.png"
+              imgsSrc1:"../../static/images/aj_rank.png"
             }
         }
         // methods: {
@@ -55,8 +55,12 @@
         margin:0 0.05rem 0 0.12rem;
         display: block;
         height: 0.21rem;
+        img{
+          width: 100%;
+        }
         svg{
-          font-size: 0.21rem;
+          color:#f5f5f5;
+          font-size:0.23rem;
         }
       }
       form{

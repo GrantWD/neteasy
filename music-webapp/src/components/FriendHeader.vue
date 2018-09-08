@@ -3,14 +3,14 @@
     <div class="top">
       <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg></a>
       <div class="tbox">
-        <a class="active" href="#">动态</a>
-        <a href="#">附近</a>
+        <a class="active" href="#" @click="select">动态</a>
+        <a href="#" @click="select">附近</a>
       </div>
-      <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg></a>
+      <a href="#"><img :src="imgsSrc1" alt=""></a>
     </div>
     <div class="nav">
-      <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg>发动态</a>
-      <a href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-videocamera"></use> </svg>发视频</a>
+      <a href="#" class="active2" @click="select2"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg>发动态</a>
+      <a href="#"  @click="select2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-videocamera"></use> </svg>发视频</a>
     </div>
   </header>
 </template>
@@ -20,16 +20,18 @@
       name:"FriendHeader",
         data(){
             return {
-              // texts1:"账号",
-              // imgsSrc1:"../../static/images/ajMusic.png"
+              imgsSrc1:"../../static/images/aj_rank.png"
             }
+        },
+      methods: {
+        // 选择方法中，进行路由的切换
+        select(e){
+          $(e.currentTarget).addClass('active').siblings().removeClass('active');
+        },
+        select2(e){
+          $(e.currentTarget).addClass('active2').siblings().removeClass('active2');
         }
-        // methods: {
-        //     // 选择方法中，进行路由的切换
-        //     select(e){
-        //         $(e.currentTarget).addClass('current').siblings().removeClass('current');
-        //     }
-        // }
+      }
     }
 
 </script>
@@ -49,8 +51,15 @@
       a{
         display: block;
         svg{
-          font-size: 0.2rem;
+          font-size: 0.28rem;
+          color:#f5f5f5;
           margin: 0 0.13rem;
+        }
+        img{
+          margin-right: 0.05rem;
+          width:0.32rem;
+          height:0.32rem;
+          align-self: center;
         }
       }
       .tbox{
@@ -90,6 +99,9 @@
           font-size: 0.2rem;
           margin-right: 0.12rem;
         }
+      }
+      .active2{
+        color:#7c797a;
       }
     }
   }

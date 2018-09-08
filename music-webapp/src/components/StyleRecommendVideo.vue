@@ -1,12 +1,12 @@
 <template>
   <div class="StyleRecommendVideo">
     <div class="StyleRecommendVideoOne">
-      <div class="StyleRecommendVideoOne1Div"><img :src="Img" alt=""></div>
+      <div class="StyleRecommendVideoOne1Div"><img :src="sssC.Img" alt=""></div>
       <div class="StyleRecommendVideoOne2Div">
-        <div class="StyleRecommendVideoOne2DivOne"><img :src="IdImg" alt=""><span>{{IdName}}</span></div>
+        <div class="StyleRecommendVideoOne2DivOne"><img :src="sssC.IdImg" alt=""><span>{{sssC.IdName}}</span></div>
         <div class="StyleRecommendVideoOne2DivTwo">
-          <span><img src="../../static/images/StyleRecommendVideo3.png" alt="">{{PlayNum}}</span>
-          <span><img src="../../static/images/StyleRecommendVideo4.png" alt="">{{CommentOrd}}</span>
+          <span><img src="../../static/images/StyleRecommendVideo3.png" alt="">{{sssC.PlayNum}}</span>
+          <span><img src="../../static/images/StyleRecommendVideo4.png" alt="">{{sssC.CommentOrd}}</span>
           <span><img src="../../static/images/StyleRecommendVideo5.png" alt=""></span>
         </div>
       </div>
@@ -19,13 +19,16 @@
         name: "StyleRecommendVideo",
       data(){
           return{
-                Img:'../../static/images/StyleRecommendVideo1.png',
-                IdImg:'../../static/images/StyleRecommendVideo2.png',
-                IdName:'之一w',
-                PlayNum:'21万',
-                CommentOrd:'248'
+                // Img:'../../static/images/StyleRecommendVideo1.png',
+                // IdImg:'../../static/images/StyleRecommendVideo2.png',
+                // IdName:'之一w',
+                // PlayNum:'21万',
+                // CommentOrd:'248'
               }
-          }
+          },
+      props:{
+        sssC:Object
+      }
     }
 </script>
 
