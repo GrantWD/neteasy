@@ -59,5 +59,9 @@
     width: 100%;
     height: 1.19rem;
     border-radius: 0.02rem;
+    margin-bottom: 0.05rem;
+  }
+  .StyleRecommendMusic1Ul li span{
+    padding: 0 0.05rem;
   }
 </style>

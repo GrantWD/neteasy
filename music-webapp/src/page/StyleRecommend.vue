@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <StyleRecommendHeader></StyleRecommendHeader>
-    <StyleRecommendStyle></StyleRecommendStyle>
+    <!--<StyleRecommendStyle></StyleRecommendStyle>-->
     <StyleRecommendSectionSwiper></StyleRecommendSectionSwiper>
     <Footer></Footer>
   </div>
