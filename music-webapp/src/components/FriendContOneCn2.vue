@@ -2,7 +2,7 @@
   <div class="con--">
     <ul class="con12">
       <li>
-        <a class="delete" href="#"><svg class="icon " aria-hidden="true" @click="select"> <use xlink:href="#icon-chuyidong"></use> </svg></a>
+        <a class="delete" href="#" @click="delect"><svg class="icon " aria-hidden="true" > <use xlink:href="#icon-chuyidong"></use> </svg></a>
         <a class="pic" href="#">
           <img src="../../static/images/ul1.jpg" alt="">
           <span></span>
@@ -27,6 +27,9 @@
         },
         methods: {
             // 选择方法中，进行路由的切换
+          delect(e){
+            $(e.currentTarget).parent().remove();
+          }
         }
     }
 
