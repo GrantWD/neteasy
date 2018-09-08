@@ -51,59 +51,14 @@
         loop: true
       })
     },
+    created(){
+      $.get("http://localhost:3000/radiodetail",(data)=>{
+        this.arr = data.obj.arr
+      })
+    },
     data(){
       return{
-        tit:[
-          {
-            ord: "我的音乐",
-            imgSrc1: '../../static/images/back.png',
-            imgSrc2: '../../static/images/aj_rank.png'
-          }
-        ],
-        arr: [
-          {
-            imgSrc1:'../../static/images/ajRDListOne.png',
-            tit1:'Don Diablo Presents Hexag',
-            text1:'知名荷兰DJ的未知领域音乐旅程',
-            dec1:'节目:45，订阅:32083'
-        },
-          {
-            imgSrc1: '../../static/images/ajRDListTwo.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '知名荷兰DJ的未知领域音乐旅程',
-            dec1: '节目:45，订阅:32083'
-          },
-          {
-            imgSrc1: '../../static/images/ajRDListThree.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '知名荷兰DJ的未知领域音乐旅程',
-            dec1: '节目:45，订阅:32083'
-          },
-          {
-            imgSrc1: '../../static/images/ajRdListFour.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '荷兰DJ，制作人官方电台',
-            dec1: '节目:675，订阅:23423'
-          },
-          {
-            imgSrc1: '../../static/images/ajRDListFive.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '荷兰电音厂牌jygkkkk官方电台',
-            dec1: '节目:45，订阅:11183'
-          },
-          {
-            imgSrc1: '../../static/images/ajRDListSix.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '带你体验更加性感真实的声音',
-            dec1: '节目:23，订阅:3243483'
-          },
-          {
-            imgSrc1: '../../static/images/ajRDListSeven.png',
-            tit1: 'Don Diablo Presents Hexag',
-            text1: '知名荷兰DJ的未知领域音乐旅程',
-            dec1: '节目:78，订阅:323383'
-          },
-        ]
+        arr:[]
       }
     }
   }

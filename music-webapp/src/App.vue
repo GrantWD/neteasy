@@ -7,13 +7,9 @@
 <script>
   export default {
     name: 'App',
-    components:{
-
-    },
   }
 </script>
-
-<style scoped>
+<style scoped lang="scss">
   #app{
     height: 100%;
   }
