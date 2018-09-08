@@ -1,0 +1,175 @@
+{
+"HostStationMusic": [
+        {
+            "ClassName": "有声书",
+            "arr": [
+                {
+                    "Img": "../../static/images/HostStationSection4.png",
+                    "name": "爷爷让我娶女鬼当媳妇"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection5.png",
+                    "name": "修仙觅长生，热血任逍遥"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection6.png",
+                    "name": "黑与白的界限，彻底颠覆你的世界观"
+                }
+            ]
+        },
+        {
+            "ClassName": "知识技能",
+            "arr": [
+                {
+                    "Img": "../../static/images/HostStationSection7.png",
+                    "name": "自信沟通力，聊天不费力"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection8.png",
+                    "name": "将全宇宙的设计故事讲给你听"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection9.png",
+                    "name": "关于身体你应该知道的事"
+                }
+            ]
+        },
+        {
+            "ClassName": "商业财经",
+            "arr": [
+                {
+                    "Img": "../../static/images/HostStationSection10.png",
+                    "name": "央视品牌顾问的财经观察"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection11.png",
+                    "name": "互联网圈内幕的犀利观察和思考"
+                },
+                {
+                    "Img": "../../static/images/HostStationSection12.png",
+                    "name": "创业的干货知识"
+                }
+            ]
+        }
+    ],
+ "HostStationDay": [
+        {
+            "to": "/RdioClass",
+            "img": "../../static/images/HostStationDay1.png",
+            "name": "电台分类"
+        },
+        {
+            "to": "",
+            "img": "../../static/images/HostStationDay2.png",
+            "name": "电台排行"
+        },
+        {
+            "to": "",
+            "img": "../../static/images/HostStationDay3.png",
+            "name": "付费精品"
+        },
+        {
+            "to": "",
+            "img": "../../static/images/StyleRecommendDay4.gif",
+            "name": "小冰电台"
+        }
+    ],
+
+ "arr": [
+        {
+            "tit3": "热门分类",
+            "imgSrc11": "../../static/images/ajClImg.png",
+            "arrdel": [
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClBook.png",
+                    "tit4": "有声书",
+                    "imgSrc10": "../../static/images/ajClBulb.png",
+                    "tit5": "知识技能"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClLine.png",
+                    "tit4": "商业财经",
+                    "imgSrc10": "../../static/images/ajClLeaf.png",
+                    "tit5": "人文历史"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClAbc.png",
+                    "tit4": "外语世界",
+                    "imgSrc10": "../../static/images/ajClBaby.png",
+                    "tit5": "亲子宝贝"
+                }
+            ]
+        },
+        {
+            "tit3": "更多分类",
+            "imgSrc11": "../../static/images/ajClImg.png",
+            "arrdel": [
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClBook.png",
+                    "tit4": "创作|翻唱",
+                    "imgSrc10": "../../static/images/ajClBulb.png",
+                    "tit5": "音乐故事"
+                },
+                {
+                    "to": "/RadioDetail",
+                    "imgSrc9": "../../static/images/ajClLine.png",
+                    "tit4": "3D电子",
+                    "imgSrc10": "../../static/images/ajClLeaf.png",
+                    "tit5": "相声曲艺"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClAbc.png",
+                    "tit4": "情感调频",
+                    "imgSrc10": "../../static/images/ajClBaby.png",
+                    "tit5": "美文读物"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClAbc.png",
+                    "tit4": "脱口秀",
+                    "imgSrc10": "../../static/images/ajClBaby.png",
+                    "tit5": "广播剧"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClAbc.png",
+                    "tit4": "二次元",
+                    "imgSrc10": "../../static/images/ajClBaby.png",
+                    "tit5": "明星做主播"
+                },
+                {
+                    "to": "",
+                    "imgSrc9": "../../static/images/ajClAbc.png",
+                    "tit4": "娱乐影视",
+                    "imgSrc10": "../../static/images/ajClBaby.png",
+                    "tit5": "科技科学"
+                }
+            ]
+        }
+    ],
+"brr": [
+        {
+            "Img": "../../static/images/HostStationSection1.png",
+            "name": "过三情感脱口秀",
+            "program": "节目:41",
+            "introduce": "喻舟X桑丹X丁丁张情感脱口秀"
+        },
+        {
+            "Img": "../../static/images/HostStationSection2.png",
+            "name": "睡不着电台",
+            "program": "节目:446",
+            "introduce": "睡不着么，来听故事吧"
+        },
+        {
+            "Img": "../../static/images/HostStationSection3.png",
+            "name": "MTkoala的休息小屋",
+            "program": "节目:110",
+            "introduce": "戴上耳机，享受不一样的感觉"
+        }
+    ]
+}

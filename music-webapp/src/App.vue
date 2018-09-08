@@ -9,7 +9,6 @@
     name: 'App',
   }
 </script>
-
 <style scoped lang="scss">
   #app{
     height: 100%;

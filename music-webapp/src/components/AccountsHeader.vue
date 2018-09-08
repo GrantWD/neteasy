@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#"><img :src="imgsSrc1" alt=""></a>
+    <a href="#"></a>
     <span>{{texts1}}</span>
     <a href="#"><img :src="imgsSrc1" alt=""></a>
   </header>
@@ -12,7 +12,7 @@
         data(){
             return {
               texts1:"账号",
-              imgsSrc1:"../../static/images/ajMusic.png"
+              imgsSrc1:"../../static/images/aj_rank.png"
             }
         }
         // methods: {
@@ -37,7 +37,7 @@
       display: block;
       width: 0.32rem;
       height:0.32rem;
-      margin: 0 0.1rem;
+      margin: 0 0.05rem;
       line-height: 0.32rem;
       img{
         width: 100%;

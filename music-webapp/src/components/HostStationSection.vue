@@ -1,206 +1,46 @@
 <template>
     <div class="HelloWorldSection">
-      <StyleRecommendSwiper></StyleRecommendSwiper>
+      <StyleRecommendStyle></StyleRecommendStyle>
+      <HostStationSwiper></HostStationSwiper>
       <HostStationDay :sssA="HostStationDay"></HostStationDay>
-      <HostStationOptimization></HostStationOptimization>
+      <HostStationOptimization :brr="brr"></HostStationOptimization>
       <HostStationMusic v-for="(HostStationMusic,index) in HostStationMusic" :key="HostStationMusic.index" :HostStationMusic="HostStationMusic"></HostStationMusic>
       <RadioClassHotClassify v-for="classifyarr in arr" :key="classifyarr.index" :classifyarr="classifyarr"></RadioClassHotClassify>
     </div>
 </template>
 
 <script>
-  import StyleRecommendSwiper from './StyleRecommendSwiper'
+  import HostStationSwiper from './HostStationSwiper'
   import HostStationDay from './HostStationDay'
   import HostStationOptimization from './HostStationOptimization'
   import HostStationMusic from './HostStationMusic'
   import RadioClassHotClassify from './RadioClassHotClassify'
+  import StyleRecommendStyle from './StyleRecommendStyle'
     export default {
         name: "HostStationSection",
       components:{
-        StyleRecommendSwiper,
+        HostStationSwiper,
         HostStationDay,
         HostStationOptimization,
         HostStationMusic,
         RadioClassHotClassify,
+        StyleRecommendStyle,
       },
       data(){
           return{
-            HostStationMusic:[
-              {
-                ClassName:'有声书1',
-                arr:[
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                ]
-              },
-              {
-                ClassName:'有声书2',
-                arr:[
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                ]
-              },
-              {
-                ClassName:'有声书3',
-                arr:[
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                ]
-              },
-              {
-                ClassName:'有声书4',
-                arr:[
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                  {
-                    Img:'../../static/images/StyleRecommendMusic2.jpg',
-                    name:'失落少年孤独心俱乐部'
-                  },
-                ]
-              },
-            ],
-            RadioClassDetail:[
-              {},{},{}
-            ],
-            RadioClassDetai2:[
-              {},{},{},{},{},{},{}
-            ],
-            HostStationDay:[
-              {
-                to:'/RdioClass',
-                img:'../../static/images/StyleRecommendDay1.gif',
-                name:'电台分类',
-              },
-              {
-                to:'',
-                img:'../../static/images/StyleRecommendDay2.gif',
-                name:'电台排行',
-              },
-              {
-                to:'',
-                img:'../../static/images/StyleRecommendDay3.gif',
-                name:'付费精品',
-              },
-              {
-                to:'',
-                img:'../../static/images/StyleRecommendDay4.gif',
-                name:'小冰电台',
-              },
-            ],
-            arr:[
-              {
-                tit3:'热门分类',
-                imgSrc11:'../../static/images/ajClImg.png',
-                arrdel:[
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClBook.png',
-                    tit4:'有声书',
-                    imgSrc10:'../../static/images/ajClBulb.png',
-                    tit5:'知识技能'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClLine.png',
-                    tit4:'商业财经',
-                    imgSrc10:'../../static/images/ajClLeaf.png',
-                    tit5:'人文历史'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClAbc.png',
-                    tit4:'外语世界',
-                    imgSrc10:'../../static/images/ajClBaby.png',
-                    tit5:'亲子宝贝'
-                  },
-                ]
-              },
-              {
-                tit3:'更多分类',
-                imgSrc11:'../../static/images/ajClImg.png',
-                arrdel:[
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClBook.png',
-                    tit4:'创作|翻唱',
-                    imgSrc10:'../../static/images/ajClBulb.png',
-                    tit5:'音乐故事'
-                  },
-                  {
-                    to:'/RadioDetail',
-                    imgSrc9:'../../static/images/ajClLine.png',
-                    tit4:'3D电子',
-                    imgSrc10:'../../static/images/ajClLeaf.png',
-                    tit5:'相声曲艺'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClAbc.png',
-                    tit4:'情感调频',
-                    imgSrc10:'../../static/images/ajClBaby.png',
-                    tit5:'美文读物'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClAbc.png',
-                    tit4:'脱口秀',
-                    imgSrc10:'../../static/images/ajClBaby.png',
-                    tit5:'广播剧'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClAbc.png',
-                    tit4:'二次元',
-                    imgSrc10:'../../static/images/ajClBaby.png',
-                    tit5:'明星做主播'
-                  },
-                  {
-                    to:'',
-                    imgSrc9:'../../static/images/ajClAbc.png',
-                    tit4:'娱乐影视',
-                    imgSrc10:'../../static/images/ajClBaby.png',
-                    tit5:'科技科学'
-                  },
-                ]
-              }
-            ],
+            HostStationMusic:[],
+            HostStationDay:[],
+            arr:[],
+            brr:[],
           }
+      },
+      created(){
+          $.get("http://localhost:3000/hoststation",(data)=>{
+            this.HostStationMusic = data.obj.HostStationMusic
+            this.HostStationDay = data.obj.HostStationDay
+            this.arr = data.obj.arr
+            this.brr = data.obj.brr
+          })
       }
     }
 </script>
