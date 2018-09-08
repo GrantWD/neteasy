@@ -1,15 +1,6 @@
 <template>
   <div class="content">
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
-    <video-recommend-cont-one></video-recommend-cont-one>
+    <video-recommend-cont-one  v-for="obj in account1" :key="obj.index" :obj="obj"></video-recommend-cont-one>
   </div>
 </template>
 

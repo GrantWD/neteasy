@@ -3,6 +3,30 @@
     "category":3,
     "result":[
         {
+            "id":10777179,
+            "type":"预告",
+            "name":"十七 预告",
+            "copywriter":"最新热门MV推荐",
+            "picUrl":"http://p1.music.126.net/DVahwTr4Jybc0nnZ1NN11g==/109951163537912266.jpg",
+            "canDislike":true,
+            "duration":22000,
+            "playCount":116786,
+            "actor":"猪猪侠吃菠菜",
+            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918523&di=75b13c56c68598653f5214842e0abdc1&imgtype=0&src=http%3A%2F%2Fpic35.photophoto.cn%2F20150410%2F0007020194213613_b.jpg",
+            "dianz":1270,
+            "comment":2709,
+            "subed":false,
+            "artists":[
+                {
+                    "id":12709,
+                    "name":"S.H.E"
+                }
+            ],
+            "artistName":"S.H.E",
+            "artistId":12709,
+            "alg":"hot_server"
+        },
+        {
             "id":10781275,
             "type":"流行歌曲",
             "name":"再见Hip-Hop",
@@ -52,30 +76,6 @@
             "artistName":"BTS (防弹少年团)",
             "artistId":783124,
             "alg":"featured"
-        },
-        {
-            "id":10777179,
-            "type":"预告",
-            "name":"十七 预告",
-            "copywriter":"最新热门MV推荐",
-            "picUrl":"http://p1.music.126.net/DVahwTr4Jybc0nnZ1NN11g==/109951163537912266.jpg",
-            "canDislike":true,
-            "duration":22000,
-            "playCount":116786,
-            "actor":"猪猪侠吃菠菜",
-            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918523&di=75b13c56c68598653f5214842e0abdc1&imgtype=0&src=http%3A%2F%2Fpic35.photophoto.cn%2F20150410%2F0007020194213613_b.jpg",
-            "dianz":1270,
-            "comment":2709,
-            "subed":false,
-            "artists":[
-                {
-                    "id":12709,
-                    "name":"S.H.E"
-                }
-            ],
-            "artistName":"S.H.E",
-            "artistId":12709,
-            "alg":"hot_server"
         },
         {
             "id":10778114,

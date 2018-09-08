@@ -26,6 +26,30 @@
             "artistId":6453,"alg":"featured"
         },
         {
+            "id":10778114,
+            "type":"华晨宇",
+            "name":"超级面对面 第173期 华晨宇：火遍全国就一定是好歌？",
+            "copywriter":"最新热门MV推荐",
+            "picUrl":"http://p1.music.126.net/LFX0iQmVvBrZeLfqJmg4AQ==/109951163534852699.jpg",
+            "canDislike":true,
+            "duration":508000,
+            "playCount":1132439,
+            "actor":"华晨宇小迷妹",
+            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918520&di=86a6a42afcdc6916e1bf42860aaef9a1&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2ce0dd146163f62408503140ef2d818d%2F6a600c338744ebf8c4b33212d3f9d72a6159a7d9.jpg",
+            "dianz":86177,
+            "comment":6177,
+            "subed":false,
+            "artists":[
+                {
+                    "id":861777,
+                    "name":"华晨宇"
+                }
+            ],
+            "artistName":"华晨宇",
+            "artistId":861777,
+            "alg":"hot_server"
+        },
+        {
             "id":10780177,
             "type":"热门歌曲",
             "name":"IDOL (feat. Nicki Minaj)",
@@ -75,30 +99,6 @@
             ],
             "artistName":"S.H.E",
             "artistId":12709,
-            "alg":"hot_server"
-        },
-        {
-            "id":10778114,
-            "type":"华晨宇",
-            "name":"超级面对面 第173期 华晨宇：火遍全国就一定是好歌？",
-            "copywriter":"最新热门MV推荐",
-            "picUrl":"http://p1.music.126.net/LFX0iQmVvBrZeLfqJmg4AQ==/109951163534852699.jpg",
-            "canDislike":true,
-            "duration":508000,
-            "playCount":1132439,
-            "actor":"华晨宇小迷妹",
-            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918520&di=86a6a42afcdc6916e1bf42860aaef9a1&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D2ce0dd146163f62408503140ef2d818d%2F6a600c338744ebf8c4b33212d3f9d72a6159a7d9.jpg",
-            "dianz":86177,
-            "comment":6177,
-            "subed":false,
-            "artists":[
-                {
-                    "id":861777,
-                    "name":"华晨宇"
-                }
-            ],
-            "artistName":"华晨宇",
-            "artistId":861777,
             "alg":"hot_server"
         }
     ]
