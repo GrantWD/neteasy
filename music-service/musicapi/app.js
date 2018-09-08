@@ -49,8 +49,7 @@ app.use('/zfy', zfyRouter);
 app.use('/video', videoRouter);
 app.use('/hoststation', hostStationRouter);
 app.use('/dayrecommend', dayRecommendRouter);
-app.use('/
-', rankingRouter);
+app.use('/ranking', rankingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
