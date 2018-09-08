@@ -11,6 +11,7 @@ import Account from '../page/Account'
 import RdioClass from '../page/RdioClass'
 import RadioDetail from '../page/RadioDetail'
 import MusicList from '../page/MusicList'
+import Ranking from '../page/Ranking'
 
 
 Vue.use(Router)
@@ -71,6 +72,11 @@ export default new Router({
       path:'/MusicList',
       name:'MusicList',
       component:MusicList
+    },
+    {
+      path:'/Ranking',
+      name:'Ranking',
+      component:Ranking
     }
   ]
 })
