@@ -7,12 +7,12 @@
         <span>换一换</span>
       </a>
     </div>
-    <div class="HostStationOptimizationDj" v-for="arr in arr" :arr="arr">
-      <img :src="arr.Img" alt="">
+    <div class="HostStationOptimizationDj" v-for="brr in brr" :brr="brr">
+      <img :src="brr.Img" alt="">
       <div class="HostStationOptimizationDjOne">
-        <h5>{{arr.name}}</h5>
-        <span class="HostStationOptimizationDjOne1Span">{{arr.program}}</span>
-        <span class="HostStationOptimizationDjOne2Span">{{arr.introduce}}</span>
+        <h5>{{brr.name}}</h5>
+        <span class="HostStationOptimizationDjOne1Span">{{brr.program}}</span>
+        <span class="HostStationOptimizationDjOne2Span">{{brr.introduce}}</span>
       </div>
     </div>
   </div>
@@ -23,27 +23,11 @@
         name: "HostStationOptimization",
       data(){
           return{
-            arr:[
-              {
-                Img:'../../static/images/HostStationOptimization2.png',
-                name:'晓苏电台',
-                program:'节目:679',
-                introduce:'每晚用音乐和你说晚安',
-              },
-              {
-                Img:'../../static/images/HostStationOptimization2.png',
-                name:'晓苏电台',
-                program:'节目:679',
-                introduce:'每晚用音乐和你说晚安',
-              },
-              {
-                Img:'../../static/images/HostStationOptimization2.png',
-                name:'晓苏电台',
-                program:'节目:679',
-                introduce:'每晚用音乐和你说晚安',
-              },
-            ]
+
           }
+      },
+      props:{
+        brr:Array
       }
     }
 </script>

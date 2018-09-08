@@ -1,0 +1,89 @@
+{
+    "code":200,
+    "category":3,
+    "result":[
+        {
+            "id":10781275,
+            "type":"流行歌曲",
+            "name":"再见Hip-Hop",
+            "copywriter":"编辑推荐：重温说唱情怀，张震岳《再见HIPHOP》MV发布！ ",
+            "picUrl":"http://p1.music.126.net/QhqdV5oU-jkFEtllW8zTtw==/109951163537736331.jpg",
+            "canDislike":false,
+            "duration":244000,
+            "playCount":102050,
+            "subed":false,
+            "artists":[
+                {"id":6453,"name":"张震岳"},
+                {"id":4479,"name":"MC Hotdog"},
+                {"id":12453329,"name":"功夫胖KungFuPen"},
+                {"id":12119618,"name":"派克特（PACT）"}
+            ],
+            "artistName":"张震岳",
+            "artistId":6453,"alg":"featured"
+        },
+        {
+            "id":10780177,
+            "type":"热门歌曲",
+            "name":"IDOL (feat. Nicki Minaj)",
+            "copywriter":"编辑推荐：防弹少年团新曲MV官方版上线",
+            "picUrl":"http://p1.music.126.net/Ix8b203b5_05IbbCb-tNGg==/109951163537651897.jpg",
+            "canDislike":false,
+            "duration":294000,
+            "playCount":115201,
+            "subed":false,
+            "artists":[
+                {
+                    "id":783124,
+                    "name":"BTS (防弹少年团)"
+                },
+                {
+                    "id":70183,
+                    "name":"Nicki Minaj"
+                }
+            ],
+            "artistName":"BTS (防弹少年团)",
+            "artistId":783124,
+            "alg":"featured"
+        },
+        {
+            "id":10777179,
+            "type":"预告",
+            "name":"十七 预告",
+            "copywriter":"最新热门MV推荐",
+            "picUrl":"http://p1.music.126.net/DVahwTr4Jybc0nnZ1NN11g==/109951163537912266.jpg",
+            "canDislike":true,
+            "duration":22000,
+            "playCount":116786,
+            "subed":false,
+            "artists":[
+                {
+                    "id":12709,
+                    "name":"S.H.E"
+                }
+            ],
+            "artistName":"S.H.E",
+            "artistId":12709,
+            "alg":"hot_server"
+        },
+        {
+            "id":10778114,
+            "type":"华晨宇",
+            "name":"超级面对面 第173期 华晨宇：火遍全国就一定是好歌？",
+            "copywriter":"最新热门MV推荐",
+            "picUrl":"http://p1.music.126.net/LFX0iQmVvBrZeLfqJmg4AQ==/109951163534852699.jpg",
+            "canDislike":true,
+            "duration":508000,
+            "playCount":1132439,
+            "subed":false,
+            "artists":[
+                {
+                    "id":861777,
+                    "name":"华晨宇"
+                }
+            ],
+            "artistName":"华晨宇",
+            "artistId":861777,
+            "alg":"hot_server"
+        }
+    ]
+}

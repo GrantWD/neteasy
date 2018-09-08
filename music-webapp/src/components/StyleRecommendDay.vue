@@ -14,28 +14,7 @@
         name: "StyleRecommendDay",
       data(){
           return{
-            // StyleRecommendDay:[
-            //   {
-            //     to:'',
-            //     img:'../../static/images/StyleRecommendDay1.gif',
-            //     name:'私人FM',
-            //   },
-            //   {
-            //     to:'/DailySpecial',
-            //     img:'../../static/images/StyleRecommendDay2.gif',
-            //     name:'每日推荐',
-            //   },
-            //   {
-            //     to:'MusicList',
-            //     img:'../../static/images/StyleRecommendDay3.gif',
-            //     name:'歌单',
-            //   },
-            //   {
-            //     to:'',
-            //     img:'../../static/images/StyleRecommendDay4.gif',
-            //     name:'排行榜',
-            //   },
-            // ]
+
           }
       },
       props:{

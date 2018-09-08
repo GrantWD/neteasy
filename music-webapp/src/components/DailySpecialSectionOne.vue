@@ -1,8 +1,8 @@
 <template>
     <div class="DailySpecialSectionOne">
       <div class="DailySpecialSectionOne">
-        <p><img src="../../static/images/DailySpecialSection1.png" alt="">{{PlayAll}}</p>
-        <p><img src="../../static/images/DailySpecialSection2.png" alt="">{{MultipleChoice}}</p>
+        <p><img src="../../static/images/DailySpecialSection1.png" alt="">{{sssC.PlayAll}}</p>
+        <p><img src="../../static/images/DailySpecialSection2.png" alt="">{{sssC.MultipleChoice}}</p>
       </div>
     </div>
 </template>
@@ -12,9 +12,11 @@
         name: "DailySpecialSectionOne",
       data(){
           return{
-            PlayAll:'播放全部',
-            MultipleChoice:'多选',
+
           }
+      },
+      props:{
+          sssC:Object
       }
     }
 </script>

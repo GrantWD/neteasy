@@ -1,11 +1,14 @@
 <template>
     <div class="DailySpecialSection">
-      <div class="DailySpecialSectionTwo" v-for="sssA in Music">
+      <div class="DailySpecialSectionTwo" v-for="sssA in sssD">
         <div class="DailySpecialSectionTwo1Div">
           <p class="DailySpecialSectionTwo1Div1P"><img :src="sssA.MusicImg" alt=""></p>
           <p class="DailySpecialSectionTwo1Div2P">
             <span class="DailySpecialSectionTwo1Div2P1Span">{{sssA.MusicName}}</span>
-            <span class="DailySpecialSectionTwo1Div2P2Span">{{sssA.MusicIdName}}</span>
+            <span class="DailySpecialSectionTwo1Div2P2Span">
+              <span v-if="sssA.True==='true'" class="DailySpecialSectionTwo1Div2P2Span1Span">SQ</span>
+              <span class="DailySpecialSectionTwo1Div2P2Span2Span">{{sssA.MusicIdName}}</span>
+            </span>
           </p>
         </div>
         <div class="DailySpecialSectionTwo2Div">
@@ -21,84 +24,11 @@
         name: "DailySpecialSection",
       data(){
           return{
-            Music:[
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-              {
-                MusicImg:'../../static/images/DailySpecialSection3.png',
-                MusicName:'走马（Cover：陈粒）',
-                MusicIdName:'摩登兄弟-摩登兄弟',
-              },
-            ]
+
           }
+      },
+      props:{
+          sssD:Array
       }
     }
 </script>
@@ -137,10 +67,34 @@
   .DailySpecialSectionTwo1Div2P1Span{
     font-size: 0.16rem;
     color: #313133;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 2.3rem;
   }
-  .DailySpecialSectionTwo1Div2P2Span{
+  .DailySpecialSectionTwo1Div2P .DailySpecialSectionTwo1Div2P2Span{
     font-size: 0.12rem;
     color: #7a7b7d;
+    display: flex;
+  }
+  .DailySpecialSectionTwo1Div2P .DailySpecialSectionTwo1Div2P2Span1Span{
+    width: 0.27rem;
+    height: 0.15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 0.05rem;
+    border: 0.01rem solid #ff672e;
+    margin-right: 0.05rem;
+    font-size: 0.08rem;
+    color: #ff672e;
+
+  }
+  .DailySpecialSectionTwo1Div2P2Span2Span{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .DailySpecialSectionTwo2Div{
     height: 0.4rem;
