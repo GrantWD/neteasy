@@ -10,6 +10,8 @@
                 <Operate></Operate>
                 <Table :playlists = 'playlists'></Table>
                 <PageTurner></PageTurner>
+				<!-- <Menu></Menu> -->
+
            </div>
 	    <Edit v-show='flag'></Edit>
         </div>
@@ -25,6 +27,7 @@ import Search from '../components/Search'
 import PageTurner from '../components/PageTurner'
 import PromptMessage from '../components/PromptMessage'
 import Edit from '../components/Edit'
+import Menu from '../components/Menu'
 export default {
   name: 'page',
   data () {
@@ -133,7 +136,8 @@ export default {
       Search,
       PageTurner,
       PromptMessage,
-      Edit
+	  Edit,
+	  Menu
   },
   methods: {
       add () {

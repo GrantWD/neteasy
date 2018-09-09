@@ -1,5 +1,6 @@
 <template>
 <div class="m-table" v-on:contextmenu.prevent="menu">
+	<div class="menus" v-show="flag"><Menu></Menu></div>
 	<table border="1">
 		<thead>
 			<tr>
@@ -36,12 +37,12 @@
 </template>
 
 <script>
-// import Edit from './Edit'
+import Menu from './Menu'
 export default {
 	name: 'HelloWorld',
 	data () {
 		return {
-			
+			flag:false
 		}
 	},
 	props: {
@@ -96,8 +97,10 @@ export default {
 		del (){
 
 		},
+		// 菜单部分显示的地方跟随鼠标的位置
 		menu(){
 			console.log("阻止");
+			this.flag=true;
 		}
 	},
 	computed: {
@@ -108,7 +111,10 @@ export default {
 			}
 			// return this.playlists[0].createTime
 		}
-	} 	  
+	},
+	components: {
+		Menu
+	}  
 
 
 }
@@ -120,7 +126,13 @@ export default {
 	$hoverColor:#f0f0f0;
 	$trHeight:35px;
 	$min-height:400px;
+	.menus{
+		position:absolute;
+		left: 0;
+		top:0;
+	}
 	.m-table{
+		position: relative;
 		// table-layout:fixed;
 		
 		margin-bottom:10px ;
@@ -148,6 +160,7 @@ export default {
 				}
 				&:hover{
 					background-color: $hoverColor;
+					cursor: pointer;
 				}
 				td{
 					img{
