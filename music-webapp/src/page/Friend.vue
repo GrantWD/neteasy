@@ -49,7 +49,7 @@
       select2(e){
         $(e.currentTarget).addClass('active').siblings().removeClass('active');
       }
-    }
+    },
   }
 </script>
 

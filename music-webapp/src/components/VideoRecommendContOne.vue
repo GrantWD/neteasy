@@ -8,7 +8,7 @@
     </div>
     <p class="p1">{{obj.name}}</p>
     <p class="p2">
-      <a class="ar" href="#"><img :src="obj.actorpicUrl" alt="">小明</a>
+      <a class="ar" href="#"><img :src="obj.actorpicUrl" alt=""><span>{{obj.actor}}</span></a>
       <span class="right">
              <a class="zan"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bangbang"></use> </svg><span>{{obj.dianz}}</span></a>
             <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-message"></use> </svg><span>{{obj.comment}}</span></a>
@@ -104,6 +104,12 @@
           margin-right: 3px;
           width: 0.3rem;
           height: 0.3rem;
+        }
+        span{
+          display: -moz-flex;
+          height:0.2rem;
+          font-size: 0.12rem;
+          color:#323233;
         }
       }
       .right{

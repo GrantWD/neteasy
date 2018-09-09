@@ -29,16 +29,13 @@
     },
     created () {
 
-      $.get('http://localhost:3000/videomuzic', (data)=> {
+      $.get('http://localhost:3000/videomuzic', (data) => {
         // console.log(data);
-        console.log(data.obj.result);
-        this.result=data.obj.result;
-        console.log(this.result);
+        // console.log(data.obj.result);
+        this.result = data.obj.result;
+        // console.log(this.result);
       });
-
-
     }
-
   }
 </script>
 
