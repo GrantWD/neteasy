@@ -3,34 +3,10 @@
     "category":3,
     "result":[
         {
-            "id":10781275,
-            "type":"流行歌曲",
-            "iname":"日语妮酱音乐电台",
-            "name":"再见Hip-Hop",
-            "copywriter":"编辑推荐：重温说唱情怀，张震岳《再见HIPHOP》MV发布！ ",
-            "picUrl":"http://p1.music.126.net/QhqdV5oU-jkFEtllW8zTtw==/109951163537736331.jpg",
-            "canDislike":false,
-            "duration":244000,
-            "playCount":102050,
-            "actor":"流行歌听听看",
-            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918524&di=1470f54cd64af419952bb475f6a7f135&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2F20130423%2FRedocn_2013042314482970.jpg",
-            "dianz":6453,
-            "comment":4479,
-            "subed":false,
-            "artists":[
-                {"id":6453,"name":"张震岳"},
-                {"id":4479,"name":"MC Hotdog"},
-                {"id":12453329,"name":"功夫胖KungFuPen"},
-                {"id":12119618,"name":"派克特（PACT）"}
-            ],
-            "artistName":"张震岳",
-            "artistId":6453,"alg":"featured"
-        },
-        {
             "id":10780177,
             "type":"热门歌曲",
-            "iname":"小明喽",
             "name":"IDOL (feat. Nicki Minaj)",
+            "iname":"小明喽",
             "copywriter":"编辑推荐：防弹少年团新曲MV官方版上线",
             "picUrl":"http://p1.music.126.net/Ix8b203b5_05IbbCb-tNGg==/109951163537651897.jpg",
             "canDislike":false,
@@ -58,8 +34,8 @@
         {
             "id":10777179,
             "type":"预告",
-            "iname":"音乐视频君",
             "name":"十七 预告",
+            "iname":"音乐视频君",
             "copywriter":"最新热门MV推荐",
             "picUrl":"http://p1.music.126.net/DVahwTr4Jybc0nnZ1NN11g==/109951163537912266.jpg",
             "canDislike":true,
@@ -79,6 +55,30 @@
             "artistName":"S.H.E",
             "artistId":12709,
             "alg":"hot_server"
+        },
+        {
+            "id":10781275,
+            "type":"流行歌曲",
+            "name":"再见Hip-Hop",
+            "iname":"日语妮酱音乐电台",
+            "copywriter":"编辑推荐：重温说唱情怀，张震岳《再见HIPHOP》MV发布！ ",
+            "picUrl":"http://p1.music.126.net/QhqdV5oU-jkFEtllW8zTtw==/109951163537736331.jpg",
+            "canDislike":false,
+            "duration":244000,
+            "playCount":102050,
+            "actor":"流行歌听听看",
+            "actorpicUrl":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536407918524&di=1470f54cd64af419952bb475f6a7f135&imgtype=0&src=http%3A%2F%2Fimg3.redocn.com%2F20130423%2FRedocn_2013042314482970.jpg",
+            "dianz":6453,
+            "comment":4479,
+            "subed":false,
+            "artists":[
+                {"id":6453,"name":"张震岳"},
+                {"id":4479,"name":"MC Hotdog"},
+                {"id":12453329,"name":"功夫胖KungFuPen"},
+                {"id":12119618,"name":"派克特（PACT）"}
+            ],
+            "artistName":"张震岳",
+            "artistId":6453,"alg":"featured"
         },
         {
             "id":10778114,

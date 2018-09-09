@@ -1,17 +1,17 @@
 <template>
   <div class="c1">
     <div class="mvbox">
-      <img src="../../static/images/mv1.jpg" alt="">
-      <a class="a1">恐怖</a>
-      <a class="a2"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bofang"></use> </svg><span>17万</span></a>
-      <a class="a3"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-stzddq-d"></use> </svg><span>24:48</span></a>
+      <img :src="obj.picUrl" alt="">
+      <a class="a1">{{obj.type}}</a>
+      <a class="a2"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bofang"></use> </svg><span>{{obj.playCount}}次</span></a>
+      <a class="a3"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-stzddq-d"></use> </svg><span>{{obj.duration}}</span></a>
     </div>
-    <p class="p1">僵尸先生3：灵幻先生-3</p>
+    <p class="p1">{{obj.name}}</p>
     <p class="p2">
-      <a class="ar" href="#"><img src="../../static/images/bai.jpg" alt="">小明</a>
+      <a class="ar" href="#"><img :src="obj.actorpicUrl" alt=""><span>{{obj.actor}}</span></a>
       <span class="right">
-             <a class="zan"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bangbang"></use> </svg><span>818</span></a>
-            <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-message"></use> </svg><span>1790</span></a>
+             <a class="zan"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bangbang"></use> </svg><span>{{obj.dianz}}</span></a>
+            <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-message"></use> </svg><span>{{obj.comment}}</span></a>
             <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-dian"></use> </svg></a>
           </span>
     </p>
@@ -20,7 +20,7 @@
 
 <script>
     export default {
-      name:"VideoRecommendContOne",
+      props:{obj:Object},
         data(){
             return {
               // texts1:"账号",
@@ -102,6 +102,14 @@
         color:#323233;
         img{
           margin-right: 3px;
+          width: 0.3rem;
+          height: 0.3rem;
+        }
+        span{
+          display: -moz-flex;
+          height:0.2rem;
+          font-size: 0.12rem;
+          color:#323233;
         }
       }
       .right{

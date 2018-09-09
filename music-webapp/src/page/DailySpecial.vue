@@ -33,11 +33,11 @@
       },
       created(){
           $.get("http://localhost:3000/dayrecommend",(data)=>{
-            this.DailySpecialHeader = data.obj.DailySpecialHeader
-            this.DailySpecialAdvertising = data.obj.DailySpecialAdvertising
-            this.DailySpecialSectionOne = data.obj.DailySpecialSectionOne
-            this.Music = data.obj.Music
-          })
+          this.DailySpecialHeader = data.obj.DailySpecialHeader
+          this.DailySpecialAdvertising = data.obj.DailySpecialAdvertising
+          this.DailySpecialSectionOne = data.obj.DailySpecialSectionOne
+          this.Music = data.obj.Music
+        })
       }
     }
 </script>

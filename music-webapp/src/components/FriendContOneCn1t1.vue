@@ -1,39 +1,69 @@
 <template>
-  <div class="con1">
-    <friend-cont-one-cn1t1 v-for="(obj,index) in result" :key="obj.index" :obj="obj"></friend-cont-one-cn1t1>
-  </div>
+  <div class="con11">
+      <div class="litop">
+        <a class="aleft" href="#">
+          <img :src="obj.actorpicUrl" alt="">
+          <p>
+            <span class="s1">{{obj.actor}}</span>
+            <span class="s1 s2">{{obj.writerTyp}}</span> <br>
+            <span class="s3">{{obj.timer}}</span>
+          </p>
+        </a>
+        <a class="aright" href="#">+ 关注</a>
+      </div>
+      <div class="bottoms">
+        <p class="lp1">{{obj.copywriter}}</p>
+        <p class="lp2">
+          <span><img :src="obj.spanUrl1" alt=""></span>
+          <span><img :src="obj.spanUrl2" alt=""></span>
+          <span><img :src="obj.spanUrl3" alt=""></span>
+          <span><img :src="obj.spanUrl4" alt=""></span>
+          <span><img :src="obj.spanUrl5" alt=""></span>
+        </p>
+        <a class="imgss" href="#">
+          <img :src="obj.picUrl1" alt="">
+          <img :src="obj.picUrl2" alt="">
+          <img :src="obj.picUrl3" alt="">
+          <img :src="obj.picUrl4" alt="">
+          <img :src="obj.picUrl5" alt="">
+          <img :src="obj.picUrl6" alt="">
+          <img :src="obj.picUrl7" alt="">
+          <img :src="obj.picUrl8" alt="">
+          <img :src="obj.picUrl9" alt="">
+        </a>
+        <div class="mv">
+          <a href="#"><img :src="obj.muzipic" alt=""></a>
+          <div class="mv-ff">
+            <p>{{obj.micname}}</p>
+            <p>{{obj.micperson}}</p>
+          </div>
+        </div>
+        <p class="lp3">{{obj.topname}}</p>
+        <p class="lp4">
+          <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-bangbang"></use> </svg><span>{{obj.dianz}}</span></a>
+          <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-message"></use> </svg><span>{{obj.show}}</span></a>
+          <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-fenxiang1"></use> </svg><span>{{obj.playCount}}</span></a>
+          <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-dian"></use> </svg><span></span></a>
+        </p>
+      </div>
+    </div>
 </template>
 
 <script>
-    import FriendContOneCn1t1 from '../components/FriendContOneCn1t1'
-    export default {
-      components: {
-        FriendContOneCn1t1,
-      },
-      data(){
-        return{
-          result:[],
-          // StyleRecommendDay:[]
-        }
-      },
-      methods: {
-      },
-      created () {
 
-        $.get('http://localhost:3000/friends', (data)=> {
-          // console.log(data);
-          // console.log(data.obj.result);
-          this.result=data.obj.result;
-          // console.log(this.result);
-        });
-      }
+    export default {
+      props:{obj:Object},
+        data(){
+            return {
+            }
+        }
 
     }
 
 </script>
 
 <style lang="scss" scoped>
-  .con1{
+  .con11{
     border-bottom:1px solid #e1e2e3;
     padding: 0.2rem  0.1rem 0;
     box-sizing: border-box;
@@ -46,6 +76,7 @@
         display: flex;
         img{
           height:100%;
+          border-radius: 50%;
         }
         p{
           .s1{
@@ -90,7 +121,9 @@
           display: block;
           width:0.2rem;
           height:0.2rem;
-          background: url("../../static/images/xin.jpg");
+          img{
+            width: 100%;
+          }
         }
       }
       .imgss{
@@ -98,6 +131,9 @@
         display: flex;
         flex-flow:row wrap;
         img{
+          width: 43%;
+          max-height:1rem;
+          min-height:0;
           border-radius: 0.03rem;
           margin:2px;
         }
@@ -109,6 +145,7 @@
           display: block;
           width: 18%;
           img{
+            width: 75%;
             margin:0.08rem;
           }
         }
@@ -139,6 +176,9 @@
           flex: 1;
           display: flex;
           align-items: center;
+          &:last-child{
+            justify-content: flex-end;
+          }
           svg{
             font-size: 0.15rem;
             color:#646565;
