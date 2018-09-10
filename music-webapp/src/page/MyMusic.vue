@@ -1,6 +1,6 @@
 <template>
   <div class="MyMusic">
-    <MyMusicHeader></MyMusicHeader>
+    <MyMusicHeader :Header="Header"></MyMusicHeader>
     <div class="box">
       <div>
         <MyMusicConList></MyMusicConList>
@@ -31,7 +31,12 @@
     },
     data(){
       return{
-        arr:[]
+        arr:[],
+        Header:{
+          ord: "我的音乐",
+          imgSrc1: '../../static/images/aj_cloud.png',
+          imgSrc2: '../../static/images/aj_rank.png'
+        }
       }
     }
 }
