@@ -1,21 +1,44 @@
 <template>
-    <nav class="m-page">
+    <nav class="m-page" v-on:click="selectPage">
         <a href="#" class="pageprv z-dis">上一页</a>
-	    <a href="#">1</a>
-	    <a href="#" class="z-crt">2</a>
+        <a href="#" v-for="(item, index) in currentPage">{{ index+page }}</a>
+	    
+	    <!-- <a href="#" class="z-crt">2</a>
 	    <a href="#">3</a>
-	    <a href="#">4</a>
-	    <i class="return">...</i>
-	    <a href="#">10</a>
+	    <a href="#">4</a>-->
+	   <i class="return">...</i> 
+        <a href="#">{{parseInt(len/10)}}</a>
 	    <a href="#" class="pagenxt">下一页</a>
     </nav>
 </template>
 <script>
 export default {
   name: 'search',
+  props: {
+      len : Number
+  },
   data () {
     return {
+        currentPage:3,
+        page:1
     }
+  },
+  methods: {
+      // 当选择了当前按钮时候，当前的按钮就向前移动一位，并且按钮的个数不变
+      selectPage (event){
+
+        var e = event || window.event;
+        var tar = e.target || e.srcElement;
+        // 获得当前点击的值
+        var page = parseInt(tar.innerText);
+        this.page = page;
+    
+        this.$emit('transfern-num',page)
+        
+      }
+  },
+  computed: {
+      
   }
 }
 </script>

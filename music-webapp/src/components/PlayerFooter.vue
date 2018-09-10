@@ -69,7 +69,7 @@ $playIconSize:.5rem;
 
             }
 
-        }
+        }   
         .timeBar{
             @include flexLayout();
             font-size: .04rem;
@@ -88,7 +88,7 @@ $playIconSize:.5rem;
                     display: block;
                     width:100px;
                     height:100%;
-                    background-color: blue;
+                    background-color: #cccccc; 
                 }
                 .ball{
                     display:block;

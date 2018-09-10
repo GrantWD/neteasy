@@ -1,7 +1,7 @@
 <template>
     <form action="#" class="search">
-        <label for=""></label><input type="text" id="search" placeholder="搜索歌曲">
-        <button class="search-btn"><i class="iconfont icon-search"></i>搜索</button>
+        <label for=""></label><input v-model="searchInput" type="text" id="search" placeholder="目前只能按照创建者来查找">
+        <button class="search-btn" v-on:click='search'><i class="iconfont icon-search"></i>搜索</button>
     </form>
 </template>
 <script>
@@ -9,7 +9,15 @@ export default {
   name: 'search',
   data () {
     return {
+        searchInput:''
     }
+  },
+  methods: {
+      // 只能根据歌手姓名来查找匹配，需要将input中的值获取到
+      search(){
+          // 将数据传到父组件
+           this.$emit('searchName',this.searchInput)
+      }
   }
 }
 </script>

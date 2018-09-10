@@ -1,6 +1,6 @@
 <template>
-<div class="m-table" v-on:contextmenu.prevent="menu">
-	<div class="menus" v-show="flag"><Menu></Menu></div>
+<div class="m-table" v-on:contextmenu.prevent="menu" v-on:click="hideMenu">
+	<div class="menus" v-show="flag"><Menu v-on:show="isShow" v-on:delInfo="del" v-on:detail="detailInfo" v-on:move="moveFiie"></Menu></div>
 	<table border="1">
 		<thead>
 			<tr>
@@ -17,7 +17,7 @@
 		</thead>
 		<tbody v-on:click='operate'>
 			<tr v-for="(item, index) in playlists">
-				<td>{{ index }}</td>
+				<td>{{ ( (num-1) *10) + index +1 }}</td>
 				<td class="musicId">{{ item.id }}</td>
 				<td class="name">{{ item.creator.nickname }}</td>
 				<td class="singer">{{ item.name }}</td>
@@ -33,20 +33,26 @@
 			</tr>
 		</tbody>
 	</table>
+	<div class="edit" v-show="editFlag">
+		<Edit v-on:closedit="close"></Edit>
+	</div>
 </div>
 </template>
 
 <script>
 import Menu from './Menu'
+import Edit from './Edit'
 export default {
 	name: 'HelloWorld',
 	data () {
 		return {
-			flag:false
+			flag:false,
+			editFlag:false
 		}
 	},
 	props: {
-		playlists:Array
+		playlists:Array,
+		num:Number
 	},
 	methods: {
 		// 点击编辑首先获得当前条目的信息，将信息传递到父组件中，显示到编辑的组件中
@@ -91,17 +97,37 @@ export default {
 		},
 		edit (event) {
 			let eve = event || window.event;
-			let tar = eve.target || eve.Element;
+			let tar = eve.target || eve.srcElement;
 			console.log(tar)
 		},
-		del (){
-
+		del (a){
+			console.log(a);
+			console.log('删除事件');
 		},
 		// 菜单部分显示的地方跟随鼠标的位置
 		menu(){
 			console.log("阻止");
 			this.flag=true;
+			// 获得当前的元素的内容
+		},
+		// 单击隐藏菜单并且选中了当前的项目
+		hideMenu () {
+			this.flag = false;
+		},
+		isShow (a) {
+			this.editFlag = a;
+		},
+		close(b){
+			this.editFlag = b;
+		},
+		detailInfo(){
+
+		},
+		moveFiie(){
+			
 		}
+
+		
 	},
 	computed: {
 		createdDate:function(){
@@ -113,7 +139,8 @@ export default {
 		}
 	},
 	components: {
-		Menu
+		Menu,
+		Edit
 	}  
 
 
@@ -165,8 +192,8 @@ export default {
 				td{
 					img{
 						display: inline-block;
-						width:60px;
-						height: 60px;
+						width:30px;
+						height: 30px;
 					}
 				}
 			}

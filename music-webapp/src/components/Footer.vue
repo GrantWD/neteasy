@@ -1,31 +1,31 @@
 <template>
     <footer>
       <router-link to="/">
-        <div class="find current" @click="select($event)">
+        <div class="menu find current" @click="select">
           <div class="img"></div>
           <p>发现</p>
         </div>
       </router-link>
       <router-link to="/VideoRecommend">
-        <div class="video" @click="select">
+        <div class="menu video" @click="select">
           <div class="img"></div>
           <p>视频</p>
         </div>
       </router-link>
       <router-link to="/MyMusic">
-        <div class="my" @click="select">
+        <div class="menu my" @click="select">
           <div class="img"></div>
           <p>我的</p>
         </div>
       </router-link>
       <router-link to="/Friend">
-        <div class="friend" @click="select">
+        <div class="menu friend" @click="select">
           <div class="img"></div>
           <p>朋友</p>
         </div>
       </router-link>
       <router-link to="/Account">
-        <div class="account" @click="select">
+        <div class="menu account" @click="select">
           <div class="img"></div>
           <p>账号</p>
         </div>
@@ -41,7 +41,9 @@
         methods: {
             // 选择方法中，进行路由的切换
             select(e){
-                $(e.currentTarget).addClass('current').siblings().removeClass('current');
+                $('.menu').removeClass('current');
+                $(e.currentTarget).addClass('current');
+   
             }
         }
     }
@@ -79,27 +81,27 @@
 
         .find{
             .img{
-                background-image: url(#{$backgroundUrl}wyy2.png);
+                background-image: url(#{$backgroundUrl}faxian.png);
 
             }
         }
         .video{
             .img{
 
-                background-image: url(#{$backgroundUrl}wyy2.png);
+                background-image: url(#{$backgroundUrl}shipin.png);
             }
 
         }
         .my{
             .img{
 
-                background-image: url(#{$backgroundUrl}music.png);
+                background-image: url(#{$backgroundUrl}wode.png);
             }
 
         }
         .friend{
             .img{
-                background-image: url(#{$backgroundUrl}wyy2.png);
+                background-image: url(#{$backgroundUrl}pengyou.png);
 
             }
 
@@ -117,7 +119,7 @@
                 color: $redColor;
             }
             .img{
-                background-image: url(#{$backgroundUrl}wyys2.png);
+                background-image: url(#{$backgroundUrl}faxians.png);
             }
         }
         .current.video{
@@ -125,7 +127,7 @@
                 color: $redColor;
             }
             .img{
-                background-image: url(#{$backgroundUrl}wyys2.png);
+                background-image: url(#{$backgroundUrl}shipins.png);
             }
         }
         .current.my{
@@ -133,7 +135,7 @@
                 color: $redColor;
             }
             .img{
-                background-image: url(#{$backgroundUrl}musics.png);
+                background-image: url(#{$backgroundUrl}wodes.png);
             }
         }
         .current.friend{
@@ -141,7 +143,7 @@
                 color: $redColor;
             }
             .img{
-                background-image: url(#{$backgroundUrl}wyys2.png);
+                background-image: url(#{$backgroundUrl}pengyous.png);
             }
         }
         .current.account{

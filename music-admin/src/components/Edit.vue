@@ -1,5 +1,5 @@
 <template>
-    <div class="edit" v-if="isShow">
+    <div class="edit">
         <div class="inner">
             <h3>编辑<i v-on:click="close" class="iconfont icon-close"></i></h3>
             <form action="">
@@ -9,7 +9,7 @@
                 <p><label for="album">专辑</label><input type="text" id="album"></p>
                 <p><label for="albumArt">封面</label><input type="text" id="albumArt"></p>
                 <p><label for="playNum">次数</label><input type="text" id="playNum"></p>
-                <button>修改</button><button>取消</button>
+                <button>确认</button><button>取消</button>
             </form>
         </div>
     </div>
@@ -22,12 +22,13 @@ export default {
   },
   data () {
     return {
-        isShow:false
+    
     }
   },
   methods: {
       close () {
-           this.isShow=false
+          console.log('关闭');
+           this.$emit('closedit',false)
       }
   }
 }

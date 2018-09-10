@@ -6,14 +6,13 @@
                <Side></Side> 
            </div>
            <div class="bd-r">
-                <Search></Search>
+                <Search v-on:searchName='search'></Search>
                 <Operate></Operate>
-                <Table :playlists = 'playlists'></Table>
-                <PageTurner></PageTurner>
+                <Table :playlists = 'playlists' :num = 'num'></Table>
+                <PageTurner :len = 'len' v-on:transfern-num='getNum'></PageTurner>
 				<!-- <Menu></Menu> -->
 
            </div>
-	    <Edit v-show='flag'></Edit>
         </div>
     </div>
 </template>
@@ -125,7 +124,9 @@ export default {
 				alubmArt:'wwww',
 				number:'52'
 			},
-		]
+		],
+		len:0,
+		num:1
     }
   },
   components: {
@@ -137,21 +138,46 @@ export default {
       PageTurner,
       PromptMessage,
 	  Edit,
-	  Menu
+	  Menu,
   },
   methods: {
-      add () {
-          flag:true
-      }
+	  getNum (num) {
+		  this.num=Number(num);
+		 fetch(`http://localhost:3000/page?num=${num}`)
+			.then((res)=>{
+				return res.json()
+			})
+			.then((res)=>{
+				console.log(res)
+				this.playlists = res.arr;
+			})
+	  },
+	  search(name){
+		  console.log(name);
+		  fetch(`http://localhost:3000/search?search=${name}`)
+			.then((res)=>{
+				return res.json()
+			})
+			.then((res)=>{
+				console.log(res)
+				this.playlists = res.arr;
+				// 获得当前过滤的len
+				this.len = res.filterLen;
+				console.log(this.len)
+			})
+		  
+	  }
   },
   created () {
-	  fetch('http://localhost:3000/catlist')
+	  fetch('http://localhost:3000/page?num=1')
 	  	.then((res)=>{
 			  return res.json()
 		  })
 		.then((res)=>{
-			this.playlists = res.obj.playlists;
-			console.log(this.playlists)
+			console.log(res)
+			this.playlists = res.arr;
+			this.len = res.len;
+			console.log(this.len)
 		})
   }
 }

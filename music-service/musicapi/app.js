@@ -22,6 +22,9 @@ var watchperRouter = require('./routes/watchper');
 var hostStationRouter = require('./routes/hoststation');
 var dayRecommendRouter = require('./routes/dayrecommend');
 var rankingRouter = require('./routes/ranking');
+var paginationRouter = require('./routes/pagination');
+var searchRouter = require('./routes/search');
+var deleteRouter = require('./routes/delete');
 
 var app = express();
 // 跨域设置
@@ -60,6 +63,8 @@ app.use('/watchper', watchperRouter);
 app.use('/hoststation', hostStationRouter);
 app.use('/dayrecommend', dayRecommendRouter);
 app.use('/ranking', rankingRouter);
+app.use('/page', paginationRouter);
+app.use('/delete', deleteRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
