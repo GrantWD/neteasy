@@ -1,21 +1,23 @@
 <template>
     <div class="DailySpecialSection">
-      <div class="DailySpecialSectionTwo" v-for="sssA in sssD">
-        <div class="DailySpecialSectionTwo1Div">
-          <p class="DailySpecialSectionTwo1Div1P"><img :src="sssA.MusicImg" alt=""></p>
-          <p class="DailySpecialSectionTwo1Div2P">
-            <span class="DailySpecialSectionTwo1Div2P1Span">{{sssA.MusicName}}</span>
-            <span class="DailySpecialSectionTwo1Div2P2Span">
+      <router-link to="/PlayerMusic" :key="sssA.index" v-for="sssA in sssD">
+        <div class="DailySpecialSectionTwo">
+          <div class="DailySpecialSectionTwo1Div">
+            <p class="DailySpecialSectionTwo1Div1P"><img :src="sssA.MusicImg" alt=""></p>
+            <p class="DailySpecialSectionTwo1Div2P">
+              <span class="DailySpecialSectionTwo1Div2P1Span">{{sssA.MusicName}}</span>
+              <span class="DailySpecialSectionTwo1Div2P2Span">
               <span v-if="sssA.True==='true'" class="DailySpecialSectionTwo1Div2P2Span1Span">SQ</span>
               <span class="DailySpecialSectionTwo1Div2P2Span2Span">{{sssA.MusicIdName}}</span>
             </span>
-          </p>
+            </p>
+          </div>
+          <div class="DailySpecialSectionTwo2Div">
+            <img src="../../static/images/DailySpecialSection4.png" alt="">
+            <img src="../../static/images/DailySpecialSection5.png" alt="">
+          </div>
         </div>
-        <div class="DailySpecialSectionTwo2Div">
-          <img src="../../static/images/DailySpecialSection4.png" alt="">
-          <img src="../../static/images/DailySpecialSection5.png" alt="">
-        </div>
-      </div>
+      </router-link>
     </div>
 </template>
 

@@ -5,14 +5,16 @@
       <img src="../../static/images/StyleRecommendMusic1.png" alt="">
     </a>
     <ul class="StyleRecommendMusic1Ul">
-      <li v-for="sss in sssA.arr">
-        <img :src="sss.url" alt="">
-        <span class="StyleRecommendMusic1Ul1Span">{{sss.name}}</span>
-        <div>
-          <img src="../../static/images/erji30×30.png" alt="">
-          <span>{{sss.PlayNum}}</span>
-        </div>
-      </li>
+        <li v-for="sss in sssA.arr">
+          <router-link :to="sss.to">
+            <img :src="sss.url" alt="">
+            <span class="StyleRecommendMusic1Ul1Span">{{sss.name}}</span>
+            <div>
+              <img src="../../static/images/erji30×30.png" alt="">
+              <span>{{sss.PlayNum}}</span>
+            </div>
+          </router-link>
+        </li>
     </ul>
   </div>
 </template>

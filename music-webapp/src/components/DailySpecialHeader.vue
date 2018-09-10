@@ -4,7 +4,7 @@
         <img src="../../static/images/DailySpecialHeader1.png" alt="">
       </router-link>
       <span>{{sssA.name}}</span>
-      <router-link to="">
+      <router-link to="/PlayerMusic">
         <img src="../../static/images/playing.png" alt="">
       </router-link>
     </div>

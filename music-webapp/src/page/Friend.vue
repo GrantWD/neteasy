@@ -16,7 +16,7 @@
     </header>
     <div class="content">
        <friend-cont-one v-show="flag ==1 "></friend-cont-one>
-       <div class="bx2" v-show="flag ==2 ">没有内容</div>
+       <friend-cont-two class="bx2" v-show="flag ==2 "></friend-cont-two>
     </div>
     <Footer></Footer>
   </div>
@@ -24,10 +24,12 @@
 
 <script >
   import FriendContOne from '../components/FriendContOne'
+  import FriendContTwo from '../components/FriendContTwo'
   import Footer from '../components/Footer'
   export default {
     components:{
       FriendContOne,
+      FriendContTwo,
       Footer
     },
     name: 'Friend',
@@ -40,15 +42,12 @@
     },
     methods:{
       show(f){
-        this.flag = f
-
+        this.flag = f;
       },
+
       select(e){
         $(e.currentTarget).addClass('active2').siblings().removeClass('active2');
       },
-      select2(e){
-        $(e.currentTarget).addClass('active').siblings().removeClass('active');
-      }
     },
   }
 </script>
