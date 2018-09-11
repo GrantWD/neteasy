@@ -1,6 +1,6 @@
 <template>
   <div class="RadioClass">
-    <MyMusicHeader></MyMusicHeader>
+    <MyMusicHeader :Header="Header"></MyMusicHeader>
     <div class="RadioClassBox">
         <RadioClassHotClassify v-for="classifyarr in arr" :key="classifyarr.index" :classifyarr="classifyarr"></RadioClassHotClassify>
     </div>
@@ -26,7 +26,12 @@
     },
     data(){
       return {
-        arr:[]
+        arr:[],
+        Header:{
+          ord: "电台分类",
+          imgSrc1: '../../static/images/aj_cloud.png',
+          imgSrc2: '../../static/images/aj_rank.png'
+        }
       }
     }
   }

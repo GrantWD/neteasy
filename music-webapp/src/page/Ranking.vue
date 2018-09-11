@@ -1,6 +1,6 @@
 <template>
   <div class="Ranking">
-    <MyMusicHeader></MyMusicHeader>
+    <MyMusicHeader :Header="Header"></MyMusicHeader>
     <div class="RankingBox">
       <div>
         <RankingOfficial v-for="arrlist in arr" :key="arrlist.index" :arrlist="arrlist"></RankingOfficial>
@@ -191,7 +191,12 @@
                   }
                 ]
               }
-            ]
+            ],
+            Header:{
+              ord: "排行榜",
+              imgSrc1: '../../static/images/aj_cloud.png',
+              imgSrc2: '../../static/images/aj_rank.png'
+            }
           }
 
         }

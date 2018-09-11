@@ -1,9 +1,9 @@
 <template>
     <div class="MyMusicHeader">
-      <img :src="imgSrc1" alt=""/>
-      <p>{{ord}}</p>
+      <img :src="Header.imgSrc1" alt=""/>
+      <p>{{Header.ord}}</p>
       <router-link to="/PlayerMusic">
-        <img :src="imgSrc2" alt=""/>
+        <img :src="Header.imgSrc2" alt=""/>
       </router-link>
     </div>
 </template>
@@ -13,10 +13,13 @@
       name: "MyMusicHeader",
       data() {
         return {
-          ord: "我的音乐",
-          imgSrc1: '../../static/images/aj_cloud.png',
-          imgSrc2: '../../static/images/aj_rank.png'
+          // ord: "我的音乐",
+          // imgSrc1: '../../static/images/aj_cloud.png',
+          // imgSrc2: '../../static/images/aj_rank.png'
         }
+      },
+      props:{
+        Header:Object,
       }
     }
 </script>
@@ -29,6 +32,7 @@
     padding:0.1rem;
     display:flex;
     justify-content: space-between;
+    align-items: center;
     background:#d83f36;
   }
   .MyMusicHeader img{
