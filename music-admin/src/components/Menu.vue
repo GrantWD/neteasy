@@ -33,6 +33,7 @@ export default {
 
         }
         if(operate ==="edit"){
+            // 并且将数据传人到edit中
             this.$emit('show',true)
         }
         if(operate === "delete"){

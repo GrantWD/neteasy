@@ -1,5 +1,5 @@
 <template>
-    <div class="prompt">
+    <div class="prompt" >
         <div class="m-layer">
             <table>
                 <tbody>

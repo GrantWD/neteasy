@@ -15,17 +15,17 @@
 				<th class="colb">订阅</th>
 			</tr>
 		</thead>
-		<tbody v-on:click='operate'>
+		<tbody>
 			<tr v-for="(item, index) in playlists">
 				<td>{{ ( (num-1) *10) + index +1 }}</td>
-				<td class="musicId">{{ item.id }}</td>
-				<td class="name">{{ item.creator.nickname }}</td>
-				<td class="singer">{{ item.name }}</td>
-				<td class="time">{{ new Date(item.createTime).toJSON().substring(0,10) }}</td>
-				<td class="album">{{ new Date(item.updateTime).toJSON().substring(0,10)}}</td>
-				<td class="alumbArt"><img :src="item.coverImgUrl"/></td>
-				<td class="alumbArt">{{ item.playCount }}</td>
-				<td class="number">{{ item.subscribedCount }}</td>
+				<td class="id">{{ item.id }}</td>
+				<td class="nickname">{{ item.creator.nickname }}</td>
+				<td class="name">{{ item.name }}</td>
+				<td class="createTime">{{ new Date(item.createTime).toJSON().substring(0,10) }}</td>
+				<td class="updateTime">{{ new Date(item.updateTime).toJSON().substring(0,10)}}</td>
+				<td class="coverImgUrl"><img :src="item.coverImgUrl"/></td>
+				<td class="playCount">{{ item.playCount }}</td>
+				<td class="subscribedCount">{{ item.subscribedCount }}</td>
 				<!-- <td>
 					<a href="javascript:void(0)"  class="edit"><i  class="iconfont icon-edit"></i></a>
 					<a href="javascript:void(0)"  class="delete"><i class="iconfont icon-delete"></i></a>
@@ -34,20 +34,27 @@
 		</tbody>
 	</table>
 	<div class="edit" v-show="editFlag">
-		<Edit v-on:closedit="close"></Edit>
+		<Edit v-on:closedit="close" :songInfo="obj"></Edit>
 	</div>
+	<!-- <div class="tipMesage" v-show='confirmTip'>
+		<PromptMessage></PromptMessage>
+	</div> -->
 </div>
 </template>
 
 <script>
 import Menu from './Menu'
 import Edit from './Edit'
+import PromptMessage from './PromptMessage'
 export default {
 	name: 'HelloWorld',
 	data () {
 		return {
 			flag:false,
-			editFlag:false
+			editFlag:false,
+			confirmTip:true,
+			obj:{},
+			id:''
 		}
 	},
 	props: {
@@ -57,58 +64,81 @@ export default {
 	methods: {
 		// 点击编辑首先获得当前条目的信息，将信息传递到父组件中，显示到编辑的组件中
 		// 采用的是给父组件添加点击事件，采用代理模式，根据类名来判断点击执行不同的事件
-		operate(event){
-			var  e = e || window.event,
-					tar = e.target || e.srcElement,
-					par = tar.parentNode.parentNode.parentNode,
-					obj = {
-						id : par.getElementsByClassName('musicId')[0].innerText,
-						name : par.getElementsByClassName('name')[0].innerText,
-						singer : par.getElementsByClassName('singer')[0].innerText,
-						time : par.getElementsByClassName('time')[0].innerText,
-						album : par.getElementsByClassName('album')[0].innerText,
-						alumbArt : par.getElementsByClassName('alumbArt')[0].innerText,
-						number : par.getElementsByClassName('number')[0].innerText,
-					}
-					// console.log(par)
-					// console.log(tar.classList)
-					// console.log(tar.className)
-					// console.log(tar.classList.contains('icon-delete'))
-					// del = tar.getElementsByClassName('icon-del')[0],
-					// edit = tar.getElementsByClassName('icon-edit')[0];
-				if(tar.classList.contains('icon-delete')){
-					// 如果点击确认就移除，点击取消什么都不做,从子组件传递一个值过来，当点击取消isDelete为false,
-					// 当点击确认时返回true，删除节点，发送ajax请求
-					// isDelete
-					if(true){
-						par.remove();
-					}
-				}
-				if(tar.classList.contains('icon-edit')){
-					// 获得当前所在行的所有的信息返回一个对象，
-					// 点击编辑时候怎样在父组件中弹出来子组件
-					// 当点击一个编辑时，让页面显示，将一个布尔值传递绑定到组件上传递过去
-					this.flag = true;
-					console.log('编辑')
-					console.log(obj)
-					return obj
-				}
-					
-		},
 		edit (event) {
 			let eve = event || window.event;
 			let tar = eve.target || eve.srcElement;
 			console.log(tar)
 		},
-		del (a){
-			console.log(a);
+		del (delFlag){
+			console.log(delFlag);
 			console.log('删除事件');
+			console.log(this.id);
+			// 根据id发送请求来删除
+			fetch(`http://localhost:3000/delete?id=${this.id}`)
+			.then((res)=>{
+				return res.json()
+			})
+			.then((res)=>{
+				console.log(res)
+				if(res.status == 200){
+					// 删除成功需要重新刷新页面，再次的刷新数据,
+					fetch('http://localhost:3000/page?num=1')
+						.then((res)=>{
+							return res.json()
+						})
+						.then((res)=>{
+							console.log(res)
+							this.playlists = res.arr;
+
+							
+						})
+				}
+			})
 		},
 		// 菜单部分显示的地方跟随鼠标的位置
-		menu(){
+		menu(event){
 			console.log("阻止");
+			// 显示菜单并且显示的位置是鼠标的位置
 			this.flag=true;
-			// 获得当前的元素的内容
+			// 获得鼠标的位置
+			var eve = event || window.event;
+			var tar = eve.target || eve.srcElement;
+			// 保存当前元的id
+			this.id = tar.parentNode.getElementsByClassName('id')[0].innerText;
+			var menus = document.getElementsByClassName('menus')[0];
+			var table = document.getElementsByClassName('m-table')[0];
+			var parentLeft = table.offsetLeft;
+			var parentTop = table.offsetTop;
+			var left = eve.clientX-parentLeft;
+			var top = eve.clientY-parentTop-60;
+			var parentWidth = parseFloat(document.defaultView.getComputedStyle(table,null).width);
+			var parentHeight= parseFloat(document.defaultView.getComputedStyle(table,null).height);
+			if(left < 0){
+				left = 0;
+			}
+			if(left > (parentWidth-122)){
+				left = parentWidth-122;
+			}
+			if(top < 0){
+				top = 0;
+			}
+			if(top > (parentHeight-145)){
+				top = parentHeight-145;
+			}
+			menus.style.left=left+'px';
+			menus.style.top=top +'px';
+			// left值和top的值必须在父元素的范围内
+			// 获得当前元素对应的tr,获得文本值
+			function getValue(className){
+				return 	tar.parentNode.getElementsByClassName(className)[0].innerText;
+			}
+			this.obj.id=getValue('id');
+			this.obj.name=getValue('name');
+			this.obj.nickname=getValue('nickname');
+			this.obj.playCount=getValue('playCount');
+			this.obj.subscribedCount=getValue('subscribedCount');
+			this.obj.updateTime=getValue('updateTime');
+			this.obj.createTime=getValue('createTime');
 		},
 		// 单击隐藏菜单并且选中了当前的项目
 		hideMenu () {
@@ -120,8 +150,8 @@ export default {
 		close(b){
 			this.editFlag = b;
 		},
-		detailInfo(){
-
+		detailInfo(delTag){
+	
 		},
 		moveFiie(){
 			
@@ -140,7 +170,8 @@ export default {
 	},
 	components: {
 		Menu,
-		Edit
+		Edit,
+		PromptMessage
 	}  
 
 

@@ -3,13 +3,14 @@
         <div class="inner">
             <h3>编辑<i v-on:click="close" class="iconfont icon-close"></i></h3>
             <form action="">
-                <p><label for="musicId">歌曲ID</label><input type="text" id="musicId"></p>
-                <p><label for="musicName">歌曲名称</label><input type="text" id="musicName"></p>
-                <p><label for="singer">歌手</label><input type="text" id="singer"></p>
-                <p><label for="album">专辑</label><input type="text" id="album"></p>
-                <p><label for="albumArt">封面</label><input type="text" id="albumArt"></p>
-                <p><label for="playNum">次数</label><input type="text" id="playNum"></p>
-                <button>确认</button><button>取消</button>
+                <p><label for="musicId">歌单ID</label><input v-model="songInfo.id" type="text" id="musicId" disabled></p>
+                <p><label for="musicName">创建者</label><input v-model="songInfo.nickname" type="text" id="musicName"><i class="iconfont icon-close"></i></p>
+                <p><label for="singer">歌单名称</label><input v-model="songInfo.name" type="text" id="singer"><i class="iconfont icon-close"></i></p>
+                <p><label for="album">创建时间</label><input v-model="songInfo.createTime" type="text" id="album"><i class="iconfont icon-close"></i></p>
+                <p><label for="albumArt">更新时间</label><input v-model="songInfo.updateTime" type="text" id="albumArt"><i class="iconfont icon-close"></i></p>
+                <p><label for="playNum">播放次数</label><input v-model="songInfo.playCount" type="text" id="playNum"><i class="iconfont icon-close"></i></p>
+                <p><label for="playNum">订阅次数</label><input v-model="songInfo.subscribedCount" type="text" id="playNum"><i class="iconfont icon-close"></i></p>
+                <button v-on:click="update">确认</button><button v-on:click="close">取消</button>
             </form>
         </div>
     </div>
@@ -18,7 +19,8 @@
 export default {
   name: 'edit',
   props: {
-      flag:Boolean
+      flag:Boolean,
+      songInfo:{}
   },
   data () {
     return {
@@ -27,8 +29,13 @@ export default {
   },
   methods: {
       close () {
-          console.log('关闭');
-           this.$emit('closedit',false)
+          console.log(this.songInfo);
+           this.$emit('closedit',false);
+      },
+      update () {
+          console.log('提交编辑更新页面');
+           this.$emit('closedit',false);
+
       }
   }
 }
@@ -72,6 +79,13 @@ export default {
             padding-left: 15px;
             p{
                 margin-top: 10px;
+                position: relative;
+                .iconfont{
+                    position:absolute;
+                    top:10px;
+                    right: 162px;
+                    cursor: pointer;
+                }
             }
             label{
                 display:inline-block;

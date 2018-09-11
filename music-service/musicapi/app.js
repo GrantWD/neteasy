@@ -25,6 +25,8 @@ var rankingRouter = require('./routes/ranking');
 var paginationRouter = require('./routes/pagination');
 var searchRouter = require('./routes/search');
 var deleteRouter = require('./routes/delete');
+var addRouter = require('./routes/add');
+var updateRouter = require('./routes/update');
 
 var app = express();
 // 跨域设置
@@ -65,6 +67,9 @@ app.use('/dayrecommend', dayRecommendRouter);
 app.use('/ranking', rankingRouter);
 app.use('/page', paginationRouter);
 app.use('/delete', deleteRouter);
+app.use('/add', addRouter);
+app.use('/update', updateRouter);
+app.use('/search', searchRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

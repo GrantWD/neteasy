@@ -21,13 +21,7 @@ function updataJson(id,params) {
     }
     console.log(musicdata.musicListInfo.musicMsgArray); // 打印下数据
     var str = JSON.stringify(musicdata); // node的写入文件只认识字符串或者二进制数，所以把json对象转为字符串
-    fs.writeFile('./music.json', str, function (err) {
-      if (err) {
-        console.log(err);
-      }
-      console.log('---修改成功-----');
-
-    })
+ 
   })
 }
 updataJson(5,855);
