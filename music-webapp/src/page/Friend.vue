@@ -4,8 +4,8 @@
       <div class="top">
         <a href="#"><svg class="icon" aria-hidden="true"> <use xlink:href="#icon-videocamera"></use> </svg></a>
         <div class="tbox">
-          <a class="active" href="#"  @click="show(1)"  >动态</a>
-          <a href="#" @click="show(2)" >附近</a>
+          <a v-bg="'#fff'"  href="#"  @click="show(1)" style="background-color:none;border-radius: 0.13rem" >动态</a>
+          <a v-bg="'#fff'" href="#" @click="show(2)" style="background-color:none;border-radius: 0.13rem" >附近</a>
         </div>
         <a href="#"><img :src="imgsSrc1" alt=""></a>
       </div>
@@ -49,6 +49,17 @@
         $(e.currentTarget).addClass('active2').siblings().removeClass('active2');
       },
     },
+    directives:{
+        bg(el,binding){
+          el.onmousedown = function(e){
+            el.style.backgroundColor = binding.value;
+            el.style.color = "black";
+            $(e.currentTarget).siblings().css({backgroundColor:"rgba(0,0,0,0)",color:"#fff"});
+            // console.log($(e.currentTarget).siblings().html());
+          }  
+        }
+    }
+
   }
 </script>
 
@@ -99,7 +110,7 @@
            .active{
              background: #ffffff;
              color:#a92e27;
-             border-radius: 0.13rem;
+             
            }
          }
        }

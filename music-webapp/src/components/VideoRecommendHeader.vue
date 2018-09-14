@@ -5,17 +5,7 @@
       <form><input class="seach" type="button" ><input class="texts" type="text" value="有没有 最近很火偶"></form>
       <a href="#"><img :src="imgsSrc1" alt=""></a>
     </div>
-    <ul class="nav">
-      <li><a  class="active" href="#">推荐</a></li>
-      <li><a href="#">现场</a></li>
-      <li><a href="#">翻唱</a></li>
-      <li><a href="#">突然想起你</a></li>
-      <li><a href="#">听BGm</a></li>
-      <li><a href="#">MV</a></li>
-      <li><a href="#">舞蹈</a></li>
-      <li><a href="#">ACG音乐</a></li>
-      <li><a href="#">演奏</a></li>
-    </ul>
+
   </header>
 </template>
 
